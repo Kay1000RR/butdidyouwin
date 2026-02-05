@@ -1,0 +1,290 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const publishDate = "2025-01-05";
+const modifiedDate = "2025-01-05";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Common Optimization Opportunities in Mature Paid Media Accounts",
+  "description": "A Las Vegas case study showing how even well-managed accounts accumulate inefficiencies over time. Real numbers, real opportunities.",
+  "datePublished": publishDate,
+  "dateModified": modifiedDate,
+  "author": {
+    "@type": "Person",
+    "name": "Kay Inoue"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "BUT DID YOU WIN"
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["article header", "article h2", "article p:first-of-type"]
+  }
+};
+---
+
+<BaseLayout 
+  title="Common Optimization Opportunities in Mature Paid Media Accounts | BUT DID YOU WIN"
+  description="A Las Vegas case study showing how even well-managed accounts accumulate inefficiencies over time. Real numbers, real opportunities."
+  schema={schema}
+>
+  <article class="py-16 bg-white">
+    <div class="site-container">
+      <div class="max-w-3xl mx-auto">
+        <header class="mb-12">
+          <h1 class="mb-4 text-brand-blue">Common Optimization Opportunities in Mature Paid Media Accounts</h1>
+          <div class="text-gray-600 mb-6">
+            <time datetime="2025-01-05">January 5, 2025</time> · 10 min read
+          </div>
+          <p class="text-xl text-gray-700 leading-relaxed italic border-l-4 border-brand-blue pl-6">
+            A Las Vegas case study showing how even well-managed accounts accumulate inefficiencies over time. Real numbers, real opportunities.
+          </p>
+        </header>
+
+        <div class="prose prose-lg max-w-none space-y-8">
+          
+          <p>
+            Paid media accounts are like cars. They run fine for a while. Then small issues accumulate. Nothing catastrophic. Just inefficiencies that compound over time.
+          </p>
+
+          <p>
+            This case study shows what that looks like in practice. Not because anyone was doing a bad job. Just because complexity creates blind spots, and familiarity makes waste invisible.
+          </p>
+
+          <h2>The Setup</h2>
+
+          <p>
+            <strong>Company:</strong> Multi-location HVAC service provider in Las Vegas<br/>
+            <strong>Monthly ad spend:</strong> $15,000<br/>
+            <strong>Account age:</strong> 3 years<br/>
+            <strong>Performance:</strong> Stable, meeting internal benchmarks
+          </p>
+
+          <p>
+            The owner requested an independent audit after hearing competitors were getting better cost-per-lead numbers. The account had been running for three years without major changes. Performance was consistent. Reports looked good.
+          </p>
+
+          <p>
+            We conducted a forensic audit. Here's what we found.
+          </p>
+
+          <h2>Finding #1: $1,800/Month in Irrelevant Search Terms</h2>
+
+          <p>
+            The account used broad match keywords with minimal negative keyword management. Over three years, the search query landscape had shifted. Terms that were relevant in 2022 had drifted into irrelevant territory by 2025.
+          </p>
+
+          <p>
+            Result: 32% of clicks came from searches that would never convert.
+          </p>
+
+          <p><strong>Examples of wasted spend:</strong></p>
+
+          <ul>
+            <li>"HVAC training programs" (job seekers, not customers)</li>
+            <li>"HVAC parts wholesale" (DIY customers, not service calls)</li>
+            <li>"HVAC technician salary Las Vegas" (job research)</li>
+            <li>"Free HVAC estimates" (price shoppers with low conversion intent)</li>
+          </ul>
+
+          <p>
+            <strong>Monthly waste:</strong> $1,800<br/>
+            <strong>Annual waste:</strong> $21,600
+          </p>
+
+          <p>
+            <strong>Why wasn't this caught earlier?</strong> Broad match works well when you're actively mining search query reports and adding negatives. But that's tedious work. It's easy to let it slide for a few months. Then a few months becomes a year. Then three years. The waste accumulates slowly enough that it doesn't trigger alarms.
+          </p>
+
+          <h2>Finding #2: $900/Month on Underperforming Locations</h2>
+
+          <p>
+            The company had five service locations. Budget was allocated equally across all five. That made sense when the account was first set up. But over time, performance diverged significantly.
+          </p>
+
+          <p><strong>Performance breakdown:</strong></p>
+
+          <ul>
+            <li>Henderson location: $85 cost per lead</li>
+            <li>Summerlin location: $92 cost per lead</li>
+            <li>North Las Vegas: $78 cost per lead</li>
+            <li>Boulder City: $247 cost per lead</li>
+            <li>Pahrump: $289 cost per lead</li>
+          </ul>
+
+          <p>
+            Boulder City and Pahrump were consuming $3,000/month in budget for 14 combined leads at an average cost of $268. The same budget reallocated to Henderson would generate 35 leads.
+          </p>
+
+          <p>
+            <strong>Monthly waste:</strong> $900<br/>
+            <strong>Annual waste:</strong> $10,800
+          </p>
+
+          <p>
+            <strong>Why wasn't this fixed?</strong> The business wanted "presence in all service areas." That's a reasonable goal. But the data showed two locations were 3x less efficient than the others. The question isn't whether to advertise there. It's whether to spend the same amount there as in high-performing areas. That's a strategic decision, but it requires looking at the numbers location by location. Which hadn't happened in a while.
+          </p>
+
+          <h2>Finding #3: $600/Month on Redundant Campaign Structure</h2>
+
+          <p>
+            The account had 14 campaigns. Some were labeled "Test Q2 2022" or "Backup Campaign." No one remembered what they were testing. But they were still running.
+          </p>
+
+          <p>
+            Worse, several campaigns were targeting the same keywords with different bid strategies. This created internal competition. Google was essentially auctioning against itself, driving up costs.
+          </p>
+
+          <p>
+            <strong>Monthly waste:</strong> $600<br/>
+            <strong>Annual waste:</strong> $7,200
+          </p>
+
+          <p>
+            <strong>Why wasn't this cleaned up?</strong> Campaign proliferation is common. Someone launches a test. It runs for a while. They get busy. The test keeps running. Six months later, no one wants to turn it off in case it's doing something important. So it stays. This happens across most accounts that run for more than a year without structural audits.
+          </p>
+
+          <h2>Finding #4: $500/Month on Conversion Tracking Errors</h2>
+
+          <p>
+            The account was optimizing for "form submissions." But when we cross-referenced form submissions with CRM data, we found 40% of submissions were spam, duplicates, or incomplete entries.
+          </p>
+
+          <p>
+            Google's algorithm was optimizing for volume, not quality. It was bidding aggressively on audiences that filled out forms but never turned into actual service calls.
+          </p>
+
+          <p>
+            <strong>Monthly waste:</strong> $500<br/>
+            <strong>Annual waste:</strong> $6,000
+          </p>
+
+          <p>
+            <strong>Why wasn't this caught?</strong> Conversion tracking was set up correctly when the account launched. But over time, spam bots got smarter. Form submissions increased. Everyone celebrated. No one checked whether those submissions were turning into revenue. The disconnect between "conversions" in Google Ads and "actual customers" in the CRM went unnoticed.
+          </p>
+
+          <h2>Finding #5: $200/Month on Outdated Ad Copy</h2>
+
+          <p>
+            The ads were written three years ago. They referenced promotions that no longer existed. They mentioned "24/7 emergency service" even though the company had stopped offering that two years ago.
+          </p>
+
+          <p>
+            Worse, the ads didn't mention the company's new financing options, which had become a major competitive advantage.
+          </p>
+
+          <p>
+            <strong>Monthly waste:</strong> $200 (conservative estimate based on lower click-through rates and conversion rates compared to updated ad copy)<br/>
+            <strong>Annual waste:</strong> $2,400
+          </p>
+
+          <p>
+            <strong>Why wasn't this updated?</strong> The ads were working. Click-through rates were stable. No one thought to update them. It's like wearing the same pair of shoes for three years. They're not broken. But they're not optimal either.
+          </p>
+
+          <h2>Total Waste: $47,000 Annually</h2>
+
+          <p>
+            Adding it up:
+          </p>
+
+          <ul>
+            <li>Irrelevant search terms: $21,600</li>
+            <li>Underperforming locations: $10,800</li>
+            <li>Redundant campaign structure: $7,200</li>
+            <li>Conversion tracking errors: $6,000</li>
+            <li>Outdated ad copy: $2,400</li>
+          </ul>
+
+          <p>
+            <strong>Total annual waste: $48,000</strong>
+          </p>
+
+          <p>
+            That's 27% of the annual ad spend. Not because anyone was negligent. Just because small inefficiencies accumulated over three years without independent review.
+          </p>
+
+          <h2>What Happened Next</h2>
+
+          <p>
+            The owner used our audit to make changes. Some they implemented in-house. Some they asked their existing provider to fix. Within 60 days:
+          </p>
+
+          <ul>
+            <li>Cost per lead dropped from $142 to $97</li>
+            <li>Monthly lead volume increased from 106 to 154 (same budget)</li>
+            <li>Campaign structure simplified from 14 campaigns to 6</li>
+            <li>Conversion tracking updated to exclude spam and duplicates</li>
+          </ul>
+
+          <p>
+            The account didn't need a complete overhaul. It just needed fresh eyes and systematic correction of accumulated drift.
+          </p>
+
+          <h2>Lessons</h2>
+
+          <p>
+            Three takeaways from this case:
+          </p>
+
+          <h3>1. Complexity creates blind spots</h3>
+
+          <p>
+            The more campaigns, ad groups, and keywords you have, the harder it is to spot inefficiencies. What starts as a well-organized account becomes cluttered over time. Regular structural audits catch this before it becomes expensive.
+          </p>
+
+          <h3>2. Familiarity makes waste invisible</h3>
+
+          <p>
+            When you look at the same account every day, you stop seeing problems. Fresh eyes catch things that familiarity obscures. That's not a criticism of anyone managing the account. It's just how human perception works.
+          </p>
+
+          <h3>3. Stable performance doesn't mean optimal performance</h3>
+
+          <p>
+            The account was "performing well" by internal benchmarks. But it was leaving $48,000 on the table annually. Stable doesn't mean efficient. It just means consistent. You need external comparison to know the difference.
+          </p>
+
+          <h2>How to Avoid This</h2>
+
+          <p>
+            Get an independent audit every 12-18 months. Not because your current setup is broken. Just because complexity accumulates and fresh eyes catch what familiarity makes invisible.
+          </p>
+
+          <p>
+            Look for audits that:
+          </p>
+
+          <ul>
+            <li>Quantify waste in dollars, not vague percentages</li>
+            <li>Provide specific, prioritized recommendations</li>
+            <li>Come with no strings attached (you're not required to hire the auditor)</li>
+            <li>Include money-back guarantees if they don't find meaningful opportunities</li>
+          </ul>
+
+          <p>
+            Think of it like getting your car inspected. Not because something's wrong. Just because regular maintenance prevents small problems from becoming expensive ones.
+          </p>
+
+        </div>
+
+        <div class="mt-12 pt-8 border-t">
+          <div class="card">
+            <h3 class="text-2xl font-bold mb-4 text-brand-blue">Want an independent evaluation?</h3>
+            <p class="text-gray-700 mb-6">
+              Our forensic paid media audits quantify waste in dollars and provide prioritized action plans. Money-back guarantee if we don't find at least the audit fee in inefficiency.
+            </p>
+            <a href="/contact" class="btn-primary inline-block">Request Your Audit</a>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center">
+          <a href="/blog" class="text-brand-blue font-semibold hover:underline">← Back to Blog</a>
+        </div>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

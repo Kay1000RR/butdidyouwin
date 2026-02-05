@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+Disallow: /contact-success
+
+Crawl-delay: 1
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: https://butdidyouwin.com/sitemap.xml
+
+Host: https://butdidyouwin.com

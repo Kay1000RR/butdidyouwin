@@ -1,0 +1,182 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Client Fit Criteria",
+  "description": "Clear criteria for who forensic paid media diagnosis is for and not for. Pre-qualification for serious operators.",
+  "about": {
+    "@type": "Service",
+    "serviceType": "Paid Media Audit",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "BUT DID YOU WIN"
+    }
+  }
+};
+---
+
+<BaseLayout 
+  title="Fit | BUT DID YOU WIN - Who This Is For"
+  description="Clear criteria for who forensic paid media diagnosis is for and not for. Pre-qualification saves time for both sides."
+  schema={schema}
+>
+  <section class="py-16 bg-white">
+    <div class="site-container">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="mb-8 text-brand-blue text-center">Fit</h1>
+        
+        <p class="text-xl text-center text-gray-700 mb-10 leading-relaxed">
+          This work is designed for operators, not optimists.
+        </p>
+        
+        <div>
+          
+          <!-- At a Glance -->
+          <div class="mb-16 bg-gray-50 p-8 border-l-4 border-brand-blue">
+            <h2 class="text-brand-blue mb-6">At a Glance</h2>
+            <dl class="space-y-3">
+              <div>
+                <dt class="font-semibold text-gray-900 mb-0.5">Role</dt>
+                <dd class="text-gray-700">Independent paid media diagnostician</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-900 mb-0.5">Pricing Model</dt>
+                <dd class="text-gray-700">Flat fee (no percentage of ad spend)</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-900 mb-0.5">Minimum Spend Threshold</dt>
+                <dd class="text-gray-700">$10,000+ monthly paid media spend</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-900 mb-0.5">Scope</dt>
+                <dd class="text-gray-700">Forensic diagnosis of paid advertising systems, incentive alignment, and business outcomes</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-900 mb-0.5">Confidentiality</dt>
+                <dd class="text-gray-700">NDAs standard. No public reviews or testimonials. Complete discretion.</dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- Who This Is For -->
+          <div class="mb-16">
+            <h2 class="text-brand-blue mb-6">Strong Fit</h2>
+            <div class="prose prose-lg max-w-none">
+              <p class="mb-6">
+                You are a strong fit if:
+              </p>
+            </div>
+            <ul class="space-y-2 ml-6 list-disc mb-6">
+              <li>Paid media decisions must be defended to leadership, partners, or investors</li>
+              <li>Lead quality is disputed internally</li>
+              <li>Sales performance and marketing reports do not align</li>
+              <li>Budget reallocation decisions carry real financial risk</li>
+              <li>You report to a board, CFO, or PE partners who expect defensible performance data</li>
+              <li>You are personally exposed to board scrutiny, pipeline quality disputes, and budget reallocation decisions</li>
+            </ul>
+            <p class="prose prose-lg">
+              You don't need encouragement. You need accuracy.
+            </p>
+          </div>
+
+          <!-- Who This Is Not For -->
+          <div class="mb-16">
+            <h2 class="text-brand-blue mb-6">Not a Fit</h2>
+            <p class="text-base text-gray-700 mb-6">
+              This is not a growth service. This is not creative testing. This is not performance theater.
+            </p>
+            <p class="text-base text-gray-700 mb-6">
+              This work is not a fit if:
+            </p>
+            <ul class="space-y-2 ml-6 list-disc mb-6">
+              <li>You want validation for existing decisions</li>
+              <li>You're shopping for a cheaper agency alternative</li>
+              <li>You want tactics without scrutiny</li>
+              <li>You believe dashboards tell the full story</li>
+              <li>You're unwilling to confront uncomfortable findings</li>
+              <li>You need someone to protect prior choices</li>
+            </ul>
+            <p class="prose prose-lg">
+              If clarity feels threatening, we're both wasting our time.
+            </p>
+          </div>
+
+          <!-- What I Expect From Clients -->
+          <div class="mb-16">
+            <h2 class="text-brand-blue mb-6">What I Expect</h2>
+            <p class="prose prose-lg mb-6">
+              This work requires:
+            </p>
+            <ul class="space-y-2 ml-6 list-disc my-6">
+              <li>Access to real data (not just the flattering parts)</li>
+              <li>Willingness to examine downstream effects beyond the ad account</li>
+              <li>Openness to correction</li>
+            </ul>
+            <p class="prose prose-lg">
+              I don't require agreement. I require honesty.
+            </p>
+          </div>
+
+          <!-- Minimum Thresholds -->
+          <div class="mb-16">
+            <h2 class="text-brand-blue mb-6">Minimum Thresholds</h2>
+            <div class="prose prose-lg max-w-none">
+              <p class="mb-6">
+                Typical minimums:
+              </p>
+            </div>
+            <ul class="space-y-2 ml-6 list-disc mb-6">
+              <li>Meaningful monthly ad spend (five figures minimum)</li>
+              <li>Active sales or conversion systems to evaluate</li>
+              <li>Willingness to act on findings</li>
+            </ul>
+            <p class="prose prose-lg">
+              If you're early-stage or still experimenting, this is likely premature.
+            </p>
+          </div>
+
+          <!-- The Tradeoff -->
+          <div class="mb-16">
+            <h2 class="text-brand-blue mb-6 mt-10">The Tradeoff</h2>
+            <div class="prose prose-lg max-w-none mb-8">
+              <p class="mb-6">
+                You get: independent judgment, clear findings, no narrative protection.
+              </p>
+              <p>
+                You give up: comfort, validation of prior decisions, optimism without evidence.
+              </p>
+            </div>
+            <p class="text-lg font-bold" class="text-brand-blue callout-left-border">
+              The tradeoff is the point.
+            </p>
+          </div>
+
+          <!-- If This Sounds Right -->
+          <div class="bg-gray-50 p-8 rounded-lg border-l-4 border-brand-blue">
+            <h3 class="text-2xl font-bold mb-4" class="text-brand-blue">Next Steps</h3>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start">
+                <span class="text-brand-blue mr-3 font-bold">→</span>
+                <span><a href="/about" class="text-brand-blue hover:underline font-semibold">Learn who conducts these evaluations</a></span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-brand-blue mr-3 font-bold">→</span>
+                <span><a href="/method" class="text-brand-blue hover:underline font-semibold">See how diagnosis is conducted</a></span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-brand-blue mr-3 font-bold">→</span>
+                <span><a href="/contact" class="text-brand-blue hover:underline font-semibold">Request a diagnosis</a></span>
+              </li>
+            </ul>
+            <p class="text-gray-600 italic">
+              Not a fit? Also a good outcome.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
