@@ -34,18 +34,14 @@ const schema = {
         </p>
 
         <form 
-          name="contact" 
           method="POST" 
-          data-netlify="true" 
-          data-netlify-honeypot="bot-field"
-          action="/contact-success"
+          action="https://formspree.io/f/mwvnezlo?redirect=https://butdidyouwin.com/contact-success"
           class="space-y-8"
         >
-          <!-- Honeypot field for spam protection -->
-          <input type="hidden" name="form-name" value="contact" />
-          <div class="hidden">
-            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-          </div>
+
+
+          <input type="text" name="_gotcha" style="display:none">
+
 
           <!-- What Happens Next Strip -->
           <div class="bg-gray-50 p-6 rounded-lg">
@@ -200,7 +196,7 @@ const schema = {
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('form[name="contact"]');
+    const form = document.querySelector('form');
     const submitButton = form?.querySelector('button[type="submit"]');
     
     if (form && submitButton) {
