@@ -25,82 +25,195 @@ const schema = {
   <section class="py-10 md:py-16 bg-white">
     <div class="site-container">
       <div class="max-w-4xl mx-auto">
-        <h1 class="text-center mb-4 md:mb-6 text-brand-blue">Request a Diagnosis</h1>
-
-        <p class="text-lg md:text-xl text-center text-gray-700 mb-3 md:mb-4 leading-relaxed">
+        <h1 class="text-center mb-6 text-brand-blue">Request a Diagnosis</h1>
+        <p class="text-xl text-center text-gray-700 mb-4 leading-relaxed">
           This form helps determine fit and scope before we schedule a call.
         </p>
-
-        <p class="text-center text-gray-600 text-sm md:text-base mb-8 md:mb-12">
+        <p class="text-center text-gray-600 mb-12">
           Used to qualify scope, data access, and economic fit before any engagement.
         </p>
 
-        <!-- HubSpot form - loader-based embed -->
-        <div 
-          class="hs-form-frame"
-          data-region="na2"
-          data-portal-id="245098442"
-          data-form-id="44ac1cf6-48ed-4783-9956-01b43cd4a3f0"
-        ></div>
+        <form 
+          name="contact" 
+          method="POST" 
+          data-netlify="true" 
+          data-netlify-honeypot="bot-field"
+          action="/contact-success"
+          class="space-y-8"
+        >
+          <!-- Honeypot field for spam protection -->
+          <input type="hidden" name="form-name" value="contact" />
+          <div class="hidden">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </div>
 
-        <script src="https://js-na2.hsforms.net/forms/embed/245098442.js" is:inline></script>
+          <!-- What Happens Next Strip -->
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <ul class="flex flex-wrap justify-center gap-6 text-sm text-gray-700">
+              <li class="flex items-center gap-2">
+                <span class="font-bold text-brand-blue">1.</span>
+                Submit
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="font-bold text-brand-blue">2.</span>
+                Fit review (24 hrs)
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="font-bold text-brand-blue">3.</span>
+                Call if appropriate
+              </li>
+            </ul>
+          </div>
 
+          <!-- Name and Email -->
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block text-sm font-semibold text-gray-900 mb-2">Full Name *</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required
+                autocomplete="name"
+                class="w-full px-3 md:px-4 py-2.5 md:py-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-colors"
+                placeholder="Your name"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-semibold text-gray-900 mb-2">Email Address *</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required
+                autocomplete="email"
+                class="w-full px-3 md:px-4 py-2.5 md:py-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-colors"
+                placeholder="you@company.com"
+              />
+            </div>
+          </div>
+
+          <!-- Company and Phone -->
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label for="company" class="block text-sm font-semibold text-gray-900 mb-2">Company</label>
+              <input 
+                type="text" 
+                id="company" 
+                name="company"
+                autocomplete="organization"
+                class="w-full px-3 md:px-4 py-2.5 md:py-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-colors"
+                placeholder="Your company"
+              />
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-semibold text-gray-900 mb-2">Phone</label>
+              <input 
+                type="tel" 
+                id="phone" 
+                name="phone"
+                autocomplete="tel"
+                class="w-full px-3 md:px-4 py-2.5 md:py-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-colors"
+                placeholder="Your phone number"
+              />
+            </div>
+          </div>
+
+          <!-- Monthly Spend -->
+          <div>
+            <label for="monthly-spend" class="block text-sm font-semibold text-gray-900 mb-2">Monthly Paid Media Spend *</label>
+            <p class="text-sm text-gray-600 mb-3">Determines scope and whether the diagnosis makes economic sense.</p>
+            <select 
+              id="monthly-spend" 
+              name="monthly-spend" 
+              required
+              class="w-full px-3 md:px-4 py-2.5 md:py-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-colors"
+            >
+              <option value="">Select range...</option>
+              <option value="under-10k">Less than $10,000 / month</option>
+              <option value="10k-50k">$10,000 – $50,000 / month</option>
+              <option value="50k-150k">$50,000 – $150,000 / month</option>
+              <option value="150k-500k">$150,000 – $500,000 / month</option>
+              <option value="500k-1m">$500,000 – $1,000,000 / month</option>
+              <option value="1m-plus">$1,000,000+ / month</option>
+            </select>
+          </div>
+
+          <!-- Context -->
+          <div>
+            <label for="message" class="block text-sm font-semibold text-gray-900 mb-2">What prompted this inquiry?</label>
+            <p class="text-sm text-gray-600 mb-3">Helps me understand your situation before we talk.</p>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="4"
+              class="w-full px-3 md:px-4 py-2.5 md:py-3 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent transition-colors"
+              placeholder="Agency underperforming? Board asking hard questions? Pipeline doesn't match reported leads? Whatever it is."
+            ></textarea>
+          </div>
+
+          <!-- Guarantee -->
+          <div class="bg-brand-blue text-white p-6 rounded-lg">
+            <p class="text-sm font-semibold mb-2">Money-Back Guarantee</p>
+            <p class="text-sm opacity-90">
+              If the diagnosis doesn't uncover at least its fee in identifiable inefficiency, full refund. No questions.
+            </p>
+          </          <!-- Submit Button -->
+          <div>
+            <button 
+              type="submit" 
+              class="btn-primary w-full sm:w-auto sm:min-w-[200px] text-center"
+            >
+              Request Diagnosis
+            </button>
+            <p class="text-sm text-gray-500 text-center mt-4">
+              No sales call. No agency pitch. Just a fit conversation.
+            </p>
+          </div>
+
+        </form>
       </div>
     </div>
   </section>
 
-  <section class="py-10 md:py-16 bg-gray-50">
+  <section class="py-16 bg-gray-50">
     <div class="site-container">
       <div class="max-w-4xl mx-auto text-center">
-        <h2 class="mb-4 md:mb-6 text-brand-blue">Direct Contact</h2>
-
-        <div class="space-y-3 md:space-y-4 text-base md:text-lg text-gray-700">
+        <h2 class="mb-6 text-brand-blue">Direct Contact</h2>
+        <div class="space-y-4 text-lg text-gray-700">
           <p>
-            <strong class="block sm:inline">Phone:</strong>
-            <a href="tel:+17027109325" class="text-brand-blue hover:underline">
-              (702) 710-9325
-            </a>
+            <strong>Phone:</strong> <a href="tel:+17027109325" class="text-brand-blue hover:underline">(702) 710-9325</a>
           </p>
-
           <p>
-            <strong class="block sm:inline">Email:</strong>
-            <a href="mailto:kay@butdidyouwin.com" class="text-brand-blue hover:underline break-all sm:break-normal">
-              kay@butdidyouwin.com
-            </a>
+            <strong>Email:</strong> <a href="mailto:kay@butdidyouwin.com" class="text-brand-blue hover:underline">kay@butdidyouwin.com</a>
           </p>
-
           <p>
-            <strong class="block sm:inline">Location:</strong>
-            <span>Las Vegas, Nevada</span>
+            <strong>Location:</strong> Las Vegas, Nevada
           </p>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- HubSpot form styling -->
-  <style is:global>
-    /* Ensure HubSpot form inputs don't zoom on iOS */
-    .hs-form-frame input,
-    .hs-form-frame select,
-    .hs-form-frame textarea {
-      font-size: 16px !important;
-    }
-    
-    /* Tighten HubSpot form spacing on mobile */
-    @media (max-width: 639px) {
-      .hs-form-frame .hs-form-field {
-        margin-bottom: 1rem;
-      }
-      
-      .hs-form-frame .hs-input {
-        padding: 0.625rem 0.75rem;
-      }
-      
-      .hs-form-frame .hs-button {
-        width: 100%;
-        padding: 0.875rem 1.5rem;
-      }
-    }
-  </style>
 </BaseLayout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form[name="contact"]');
+    const submitButton = form?.querySelector('button[type="submit"]');
+    
+    if (form && submitButton) {
+      const originalText = submitButton.textContent;
+      
+      form.addEventListener('submit', function(e) {
+        if (submitButton.classList.contains('loading')) {
+          e.preventDefault();
+          return false;
+        }
+        
+        submitButton.classList.add('loading');
+        submitButton.disabled = true;
+        submitButton.textContent = 'Submitting...';
+      });
+    }
+  });
+</script>
