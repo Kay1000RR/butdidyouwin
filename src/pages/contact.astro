@@ -31,22 +31,30 @@ const schema = {
           This form helps determine fit and scope before we schedule a call.
         </p>
 
-        <p class="text-center text-gray-600 text-sm md:text-base mb-8 md:mb-12">
-          Used to qualify scope, data access, and economic fit before any engagement.
-        </p>
+        <!-- HubSpot form mount point -->
+        <div id="hubspot-contact-form"></div>
 
-        <!-- HubSpot form embed (new loader-based embed) -->
-        <div
-          class="hs-form-frame"
-          data-region="na2"
-          data-portal-id="245098442"
-          data-form-id="44ac1cf6-48ed-4783-9956-01b43cd4a3f0">
-        </div>
+        <script is:inline>
+          (function () {
+            var script = document.createElement("script");
+            script.src = "https://js.hsforms.net/forms/embed/v2.js";
+            script.async = true;
 
-        <script
-          src="https://js-na2.hsforms.net/forms/embed/245098442.js"
-          is:inline>
+            script.onload = function () {
+              if (window.hbspt) {
+                window.hbspt.forms.create({
+                  region: "na2",
+                  portalId: "245098442",
+                  formId: "44ac1cf6-48ed-4783-9956-01b43cd4a3f0",
+                  target: "#hubspot-contact-form"
+                });
+              }
+            };
+
+            document.body.appendChild(script);
+          })();
         </script>
+
 
       </div>
     </div>
