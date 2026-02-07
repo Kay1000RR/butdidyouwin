@@ -53,7 +53,7 @@ const schema = {
   description="Kay Inoue: Independent paid media diagnostician with 25+ years of business operations experience. Accountable for revenue, payroll, and outcomes. Not just performance metrics."
   schema={schema}
 >
-  <section class="py-16 bg-white">
+  <section class="py-10 md:py-16 bg-white">
     <div class="site-container">
       <div class="max-w-4xl mx-auto">
         <h1 class="mb-6 text-brand-blue text-center">About</h1>
@@ -61,8 +61,8 @@ const schema = {
         <div>
           
           <!-- Opening Statement with Headshot Adjacent -->
-          <div class="mb-12">
-            <p class="text-xl font-bold mb-6 text-center" class="text-gray-900">
+          <div class="mb-8 md:mb-12">
+            <p class="text-xl font-bold mb-6 text-center text-gray-900">
               I have been accountable for revenue, payroll, and outcomes.<br />
               Not just performance metrics.
             </p>
@@ -70,20 +70,24 @@ const schema = {
             <!-- Two-Column Layout: Headshot + Paragraph -->
             <div class="grid md:grid-cols-[280px_1fr] gap-6 md:gap-8 mb-8 md:items-start">
               <!-- Headshot Column -->
-              <div>
+              <div class="mx-auto md:mx-0 max-w-[280px] md:max-w-none">
                 <img 
                   src="/kay-inoue-headshot.jpg" 
                   alt="Kay Inoue - Independent Paid Media Diagnostician" 
                   class="w-full mb-3 block"
+                  width="280"
+                  height="350"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div class="border-t border-gray-300 pt-3">
-                  <div class="text-xs font-bold uppercase tracking-wider" class="text-gray-500 tracking-widest">KAY INOUE</div>
-                  <div class="text-xs" class="text-gray-400 mt-1">Founder & Principal</div>
+                  <div class="text-xs font-bold uppercase tracking-widest text-gray-500">KAY INOUE</div>
+                  <div class="text-xs text-gray-400 mt-1">Founder & Principal</div>
                 </div>
               </div>
               
               <!-- Paragraph Column -->
-              <div class="prose prose-lg max-w-none [&>p:first-child]:mt-0">
+              <div class="prose prose-base md:prose-lg max-w-none [&>p:first-child]:mt-0">
                 <p>
                   I've built and operated businesses across automotive, manufacturing, and commercial services. Founded companies. Negotiated distribution deals. Led revenue teams. Sat inside operations, inventory, fulfillment, and finance. Hit quarterly targets. Missed quarterly targets. Watched the gap between reported performance and actual revenue.
                 </p>
@@ -98,8 +102,8 @@ const schema = {
           </div>
 
           <!-- What I Do -->
-          <div class="mb-12">
-            <h2 class="text-brand-blue mb-6">What I Do</h2>
+          <div class="mb-8 md:mb-12">
+            <h2 class="text-brand-blue mb-4 md:mb-6">What I Do</h2>
             <p>
               I diagnose paid media as a business system with downstream consequences. I don't stop at the dashboard metrics you are shown. I evaluate whether advertising made the business materially better.
             </p>
@@ -119,15 +123,15 @@ const schema = {
           </div>
 
           <!-- Why I Am Independent -->
-          <div class="mb-12">
-            <h2 class="text-brand-blue mb-6">Why I Am Independent</h2>
+          <div class="mb-8 md:mb-12">
+            <h2 class="text-brand-blue mb-4 md:mb-6">Why I Am Independent</h2>
             <div class="bg-gray-50 p-6 rounded-lg mb-6">
               <p class="text-lg mb-4">
                 I do not sell media.<br />
                 I do not earn based on spend.<br />
                 I do not benefit from continued complexity.
               </p>
-              <p class="text-lg font-bold" class="text-brand-blue">
+              <p class="text-lg font-bold text-brand-blue">
                 My role exists precisely where incentives break down.
               </p>
             </div>
@@ -140,8 +144,8 @@ const schema = {
           </div>
 
           <!-- Discretion -->
-          <div class="mb-12">
-            <h2 class="text-brand-blue mb-6">Discretion</h2>
+          <div class="mb-8 md:mb-12">
+            <h2 class="text-brand-blue mb-4 md:mb-6">Discretion</h2>
             <p class="mb-6">
               Confidentiality isn't a courtesy. It's a requirement.
             </p>
@@ -151,8 +155,8 @@ const schema = {
           </div>
 
           <!-- What This Isn't -->
-          <div class="mb-12">
-            <h2 class="text-brand-blue mb-6">What This Isn't</h2>
+          <div class="mb-8 md:mb-12">
+            <h2 class="text-brand-blue mb-4 md:mb-6">What This Isn't</h2>
             <p class="mb-6">
               I'm not a growth agency.<br>
               I'm not a creative studio.<br>
@@ -171,7 +175,7 @@ const schema = {
 
           <!-- Structured Next Steps CTA -->
           <div class="bg-gray-50 p-6 md:p-8 rounded-r-lg border-l-4 border-brand-blue">
-            <h3 class="text-2xl font-bold mb-4" class="text-brand-blue">Next Steps</h3>
+            <h3 class="text-2xl font-bold mb-4 text-brand-blue">Next Steps</h3>
             <ul class="space-y-3 mb-6">
               <li class="flex items-start">
                 <span class="text-brand-blue mr-3 font-bold">→</span>

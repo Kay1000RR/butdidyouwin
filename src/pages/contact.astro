@@ -22,16 +22,16 @@ const schema = {
   description="Request a forensic paid media diagnosis or discuss evaluation services. Independent judgment with money-back guarantee."
   schema={schema}
 >
-  <section class="py-16 bg-white">
+  <section class="py-10 md:py-16 bg-white">
     <div class="site-container">
       <div class="max-w-4xl mx-auto">
-        <h1 class="text-center mb-6 text-brand-blue">Request a Diagnosis</h1>
+        <h1 class="text-center mb-4 md:mb-6 text-brand-blue">Request a Diagnosis</h1>
 
-        <p class="text-xl text-center text-gray-700 mb-4 leading-relaxed">
+        <p class="text-lg md:text-xl text-center text-gray-700 mb-3 md:mb-4 leading-relaxed">
           This form helps determine fit and scope before we schedule a call.
         </p>
 
-        <p class="text-center text-gray-600 mb-12">
+        <p class="text-center text-gray-600 text-sm md:text-base mb-8 md:mb-12">
           Used to qualify scope, data access, and economic fit before any engagement.
         </p>
 
@@ -52,31 +52,58 @@ const schema = {
     </div>
   </section>
 
-  <section class="py-16 bg-gray-50">
+  <section class="py-10 md:py-16 bg-gray-50">
     <div class="site-container">
       <div class="max-w-4xl mx-auto text-center">
-        <h2 class="mb-6 text-brand-blue">Direct Contact</h2>
+        <h2 class="mb-4 md:mb-6 text-brand-blue">Direct Contact</h2>
 
-        <div class="space-y-4 text-lg text-gray-700">
+        <div class="space-y-3 md:space-y-4 text-base md:text-lg text-gray-700">
           <p>
-            <strong>Phone:</strong>
+            <strong class="block sm:inline">Phone:</strong>
             <a href="tel:+17027109325" class="text-brand-blue hover:underline">
               (702) 710-9325
             </a>
           </p>
 
           <p>
-            <strong>Email:</strong>
-            <a href="mailto:kay@butdidyouwin.com" class="text-brand-blue hover:underline">
+            <strong class="block sm:inline">Email:</strong>
+            <a href="mailto:kay@butdidyouwin.com" class="text-brand-blue hover:underline break-all sm:break-normal">
               kay@butdidyouwin.com
             </a>
           </p>
 
           <p>
-            <strong>Location:</strong> Las Vegas, Nevada
+            <strong class="block sm:inline">Location:</strong>
+            <span>Las Vegas, Nevada</span>
           </p>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- HubSpot form mobile overrides -->
+  <style is:global>
+    /* Ensure HubSpot form inputs don't zoom on iOS */
+    .hs-form-frame input,
+    .hs-form-frame select,
+    .hs-form-frame textarea {
+      font-size: 16px !important;
+    }
+    
+    /* Tighten HubSpot form spacing on mobile */
+    @media (max-width: 639px) {
+      .hs-form-frame .hs-form-field {
+        margin-bottom: 1rem;
+      }
+      
+      .hs-form-frame .hs-input {
+        padding: 0.625rem 0.75rem;
+      }
+      
+      .hs-form-frame .hs-button {
+        width: 100%;
+        padding: 0.875rem 1.5rem;
+      }
+    }
+  </style>
 </BaseLayout>

@@ -38,7 +38,7 @@ const schema = {
   schema={schema}
 >
   <!-- Hero Section -->
-  <section class="py-16 md:py-24 bg-white border-b border-gray-200">
+  <section class="py-10 md:py-16 lg:py-24 bg-white border-b border-gray-200">
     <div class="site-container">
       <div class="max-w-5xl">
         <!-- Eyebrow -->
@@ -47,12 +47,12 @@ const schema = {
         </p>
         
         <!-- Main Headline -->
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-gray-900-forced">
+        <h1 class="mb-4 md:mb-6 text-gray-900-forced">
           Forensic paid media diagnosis<br class="md:hidden" /> for operators who need to justify spend.
         </h1>
         
         <!-- Subheadline -->
-        <div class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl">
+        <div class="text-lg md:text-xl lg:text-2xl text-gray-600 mb-6 md:mb-8 max-w-3xl">
           <p class="mb-2">I evaluate advertising as a business system.<br />
           Revenue, sales friction, capital allocation.<br />
           Not as a channel problem.</p>
@@ -60,7 +60,7 @@ const schema = {
         </div>
         
         <!-- CTA -->
-        <div class="mb-8">
+        <div class="mb-6 md:mb-8">
           <a href="/contact" class="btn-primary text-center inline-block">
             Request Diagnosis
           </a>
@@ -70,27 +70,27 @@ const schema = {
         </div>
         
         <!-- Trust Indicators -->
-        <div class="flex flex-wrap gap-6 text-sm text-gray-500">
+        <div class="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2 text-sm text-gray-500">
           <span class="flex items-center gap-2">
-            <svg class="w-5 h-5 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
+            <svg class="w-5 h-5 text-brand-blue flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
             </svg>
             48-hour engagement start
           </span>
           <span class="flex items-center gap-2">
-            <svg class="w-5 h-5 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
+            <svg class="w-5 h-5 text-brand-blue flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
             </svg>
             No retainer required
           </span>
           <span class="flex items-center gap-2">
-            <svg class="w-5 h-5 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
+            <svg class="w-5 h-5 text-brand-blue flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
             </svg>
             Independent, flat fee
           </span>
           <span class="flex items-center gap-2">
-            <svg class="w-5 h-5 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
+            <svg class="w-5 h-5 text-brand-blue flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
             </svg>
             Discretion guaranteed
@@ -101,27 +101,36 @@ const schema = {
   </section>
 
   <!-- Proof Metrics Bar -->
-  <section class="py-6 bg-gray-50 border-b border-gray-200">
+  <section class="py-4 md:py-6 bg-gray-50 border-b border-gray-200">
     <div class="site-container">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8 text-center">
         <div>
-          <div class="text-3xl md:text-4xl font-bold text-brand-blue font-mono">$18K+<sup class="text-xs align-super">¹</sup></div>
-          <div class="text-sm text-gray-600 mt-1">Avg. monthly waste identified</div>
+          <div class="text-2xl md:text-3xl lg:text-4xl font-bold text-brand-blue font-mono">$18K+<sup class="text-xs align-super">¹</sup></div>
+          <div class="text-xs md:text-sm text-gray-600 mt-1">
+            <span class="hidden sm:inline">Avg. monthly waste identified</span>
+            <span class="sm:hidden">Avg. waste found</span>
+          </div>
         </div>
         <div>
-          <div class="text-3xl md:text-4xl font-bold text-brand-blue">5 days<sup class="text-xs align-super">²</sup></div>
-          <div class="text-sm text-gray-600 mt-1">Typical turnaround</div>
+          <div class="text-2xl md:text-3xl lg:text-4xl font-bold text-brand-blue">5 days<sup class="text-xs align-super">²</sup></div>
+          <div class="text-xs md:text-sm text-gray-600 mt-1">Typical turnaround</div>
         </div>
         <div>
-          <div class="text-3xl md:text-4xl font-bold text-brand-blue font-mono">100%</div>
-          <div class="text-sm text-gray-600 mt-1">Money-back if no waste found</div>
+          <div class="text-2xl md:text-3xl lg:text-4xl font-bold text-brand-blue font-mono">100%</div>
+          <div class="text-xs md:text-sm text-gray-600 mt-1">
+            <span class="hidden sm:inline">Money-back if no waste found</span>
+            <span class="sm:hidden">Money-back guarantee</span>
+          </div>
         </div>
         <div>
-          <div class="text-3xl md:text-4xl font-bold text-brand-blue font-mono">0%</div>
-          <div class="text-sm text-gray-600 mt-1">Commission on your ad spend</div>
+          <div class="text-2xl md:text-3xl lg:text-4xl font-bold text-brand-blue font-mono">0%</div>
+          <div class="text-xs md:text-sm text-gray-600 mt-1">
+            <span class="hidden sm:inline">Commission on your ad spend</span>
+            <span class="sm:hidden">Commission on spend</span>
+          </div>
         </div>
       </div>
-      <p class="text-xs text-gray-500 text-center mt-4 max-w-3xl mx-auto">
+      <p class="text-xs text-gray-500 text-center mt-3 md:mt-4 max-w-3xl mx-auto leading-relaxed">
         <sup class="text-xs">¹</sup>Results based on completed audits. Results vary by account structure, market, and spend profile.<br />
         <sup class="text-xs">²</sup>Turnaround varies by scope: 3-5 days for single-platform, up to 10-14 days for enterprise-level engagements.
       </p>
@@ -129,13 +138,13 @@ const schema = {
   </section>
 
   <!-- Authority & Problem Statement -->
-  <section class="py-16 bg-gray-50">
+  <section class="py-10 md:py-16 bg-gray-50">
     <div class="site-container">
-      <div class="max-w-4xl mx-auto space-y-8">
-        <p class="text-lg text-gray-700 leading-relaxed">
+      <div class="max-w-4xl mx-auto space-y-6 md:space-y-8">
+        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
           I have been accountable for revenue, payroll, and outcomes. Not just performance metrics. I've watched a quarter's pipeline collapse because a 'successful' campaign drove leads that couldn't close. That experience shapes how I evaluate advertising.
         </p>
-        <p class="text-lg text-gray-700 leading-relaxed">
+        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
           Businesses spending $10k to $1M+ monthly don't need encouragement. They need confidence their capital is working. That requires judgment from someone with no incentive to increase spend.
         </p>
       </div>
@@ -150,20 +159,20 @@ const schema = {
           <span class="marker-number">01</span>
           <span class="marker-rule"></span>
         </div>
-        <h2 class="mb-10 max-w-headline">This Is Verification. Not Performance Tuning.</h2>
+        <h2 class="mb-6 md:mb-10 max-w-headline">This Is Verification. Not Performance Tuning.</h2>
 
-        <p class="text-lg text-gray-700 mb-6">
+        <p class="text-base md:text-lg text-gray-700 mb-4 md:mb-6">
           I determine whether paid media performance survives contact with reality.
         </p>
 
-        <p class="text-lg text-gray-700 mb-6">
+        <p class="text-base md:text-lg text-gray-700 mb-4 md:mb-6">
           Did advertising make the business materially better? That's the revenue question.<br />
           Did leads improve sales productivity or degrade it? That's the sales behavior question.<br />
           Do reported conversions represent real economic events? That's the attribution question.<br />
           Is spend justified by evidence or habit? That's the capital allocation question.
         </p>
         
-        <p class="text-lg text-gray-700 mb-6">
+        <p class="text-base md:text-lg text-gray-700 mb-4 md:mb-6">
           Most audits stop at the first question. I don't stop until I can answer all four.
         </p>
         
@@ -184,15 +193,15 @@ const schema = {
         </div>
         <h2 class="mb-8 text-brand-blue">What Surfaces in the First Diagnosis</h2>
         
-        <p class="text-lg text-gray-700 mb-6">
+        <p class="text-base md:text-lg text-gray-700 mb-4 md:mb-6">
           Conversion tracking firing on page views instead of actual purchases. Search terms consuming budget that will never convert. Audience overlap inflating frequency without expanding reach.
         </p>
         
-        <p class="text-lg text-gray-700 mb-6">
+        <p class="text-base md:text-lg text-gray-700 mb-4 md:mb-6">
           Attribution models crediting last-click when conversion happened three touchpoints earlier. Landing pages misaligned with ad intent. Bid strategies optimizing for platform efficiency, not business outcomes.
         </p>
         
-        <p class="text-lg text-gray-700 mb-6">
+        <p class="text-base md:text-lg text-gray-700 mb-4 md:mb-6">
           These patterns appear in nearly every account I examine. Not because anyone's doing a bad job. Because platforms are designed to obscure them.
         </p>
         
@@ -212,7 +221,7 @@ const schema = {
         
         <h2 class="mb-6 text-brand-blue">Diagnosis starts at $1,250. Flat fee.</h2>
         
-        <p class="text-lg text-gray-700 mb-6">
+        <p class="text-base md:text-lg text-gray-700 mb-4 md:mb-6">
           Campaign-level, cross-channel, or full revenue system scope. You receive a written evaluation with waste quantified in dollars, a video walkthrough, and a prioritized action list. Money-back guarantee if no inefficiency found.
         </p>
         
@@ -222,7 +231,7 @@ const schema = {
   </section>
 
   <!-- CTA Section -->
-  <section class="section-dark py-24">
+  <section class="py-10 md:py-16 section-dark bg-brand-blue">
     <div class="site-container">
       <div class="max-w-3xl mx-auto text-center">
         <div class="section-marker justify-center mb-8">

@@ -1,68 +1,67 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const blogPosts = [
+const posts = [
   {
-    title: "5 Signs Your Paid Media Accounts Need a Fresh Set of Eyes",
-    slug: "5-signs-fresh-eyes-needed",
-    excerpt: "Even well-managed paid media accounts accumulate inefficiencies over time. Here are five symptoms that suggest it's time for an independent evaluation.",
-    date: "2025-01-15",
-    author: "Kay Inoue",
-    readTime: "6 min read"
+    slug: '5-signs-fresh-eyes-needed',
+    title: '5 Signs Your Paid Media Accounts Need a Fresh Set of Eyes',
+    date: '2025-01-15',
+    description: 'Even well-managed paid media accounts accumulate inefficiencies over time. Here are five symptoms that suggest it\'s time for an independent evaluation.',
+    readTime: '6 min read',
   },
   {
-    title: "How Pricing Models Shape Paid Media Recommendations",
-    slug: "percentage-pricing-conflicts",
-    excerpt: "Understanding how different pricing structures create different incentives in paid media management. Not about ethics. Just about math.",
-    date: "2025-01-10",
-    author: "Kay Inoue",
-    readTime: "7 min read"
+    slug: 'cost-of-wasted-ad-spend',
+    title: 'Common Optimization Opportunities in Mature Paid Media Accounts',
+    date: '2025-01-10',
+    description: 'The hidden cost of wasted ad spend and common inefficiencies found in mature advertising accounts.',
+    readTime: '8 min read',
   },
   {
-    title: "Common Optimization Opportunities in Mature Paid Media Accounts",
-    slug: "cost-of-wasted-ad-spend",
-    excerpt: "A Las Vegas case study showing how even well-managed accounts accumulate inefficiencies over time. Real numbers, real opportunities.",
-    date: "2025-01-05",
-    author: "Kay Inoue",
-    readTime: "10 min read"
-  }
+    slug: 'percentage-pricing-conflicts',
+    title: 'How Pricing Models Shape Paid Media Recommendations',
+    date: '2025-01-05',
+    description: 'Understanding how percentage-of-spend pricing creates conflicts of interest in paid media management.',
+    readTime: '7 min read',
+  },
 ];
 
 const schema = {
   "@context": "https://schema.org",
   "@type": "Blog",
   "name": "BUT DID YOU WIN Blog",
-  "description": "Insights on paid media audits, optimization strategies, and independent evaluation of Google Ads and Meta Ads performance.",
-  "blogPost": blogPosts.map(post => ({
+  "description": "Insights on paid media diagnosis, advertising efficiency, and business outcomes from an independent auditor.",
+  "url": "https://butdidyouwin.com/blog",
+  "publisher": {
+    "@type": "Organization",
+    "name": "BUT DID YOU WIN"
+  },
+  "blogPost": posts.map(post => ({
     "@type": "BlogPosting",
     "headline": post.title,
+    "description": post.description,
     "datePublished": post.date,
-    "author": {
-      "@type": "Person",
-      "name": post.author
-    },
-    "description": post.excerpt
+    "url": `https://butdidyouwin.com/blog/${post.slug}`
   }))
 };
 ---
 
 <BaseLayout 
-  title="Blog | BUT DID YOU WIN - Paid Media Insights & Case Studies"
-  description="Insights on paid media audits, optimization strategies, and independent evaluation. Real case studies, real numbers, real opportunities."
+  title="Blog | BUT DID YOU WIN - Paid Media Insights"
+  description="Insights on paid media diagnosis, advertising efficiency, and business outcomes from an independent auditor. Perspectives on the gap between dashboard metrics and reality."
   schema={schema}
 >
-  <section class="py-16 bg-white">
+  <section class="py-10 md:py-16 bg-white">
     <div class="site-container">
       <div class="max-w-4xl mx-auto">
-        <h1 class="text-center mb-6 text-brand-blue">Blog</h1>
-        <p class="text-xl text-center text-gray-700 mb-12 leading-relaxed">
-          Insights on paid media audits, optimization strategies, and independent evaluation.
+        <h1 class="text-center mb-4 md:mb-6 text-brand-blue">Blog</h1>
+        <p class="text-lg md:text-xl text-center text-gray-700 mb-8 md:mb-12 leading-relaxed">
+          Perspectives on paid media, business outcomes, and the gap between dashboard metrics and reality.
         </p>
 
-        <div class="space-y-8">
-          {blogPosts.map(post => (
+        <div class="space-y-6 md:space-y-8">
+          {posts.map((post) => (
             <article class="card">
-              <div class="flex items-center gap-4 text-sm text-gray-600 mb-3">
+              <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-600 mb-3">
                 <time datetime={post.date}>
                   {new Date(post.date).toLocaleDateString('en-US', { 
                     year: 'numeric', 
@@ -70,21 +69,14 @@ const schema = {
                     day: 'numeric' 
                   })}
                 </time>
-                <span>•</span>
+                <span aria-hidden="true">·</span>
                 <span>{post.readTime}</span>
               </div>
-              <h2 class="text-2xl font-bold mb-3 text-brand-blue">
-                <a href={`/blog/${post.slug}`} class="hover:underline">
-                  {post.title}
-                </a>
+              <h2 class="text-xl md:text-2xl font-bold mb-2 md:mb-3 text-brand-blue">
+                <a href={`/blog/${post.slug}`} class="hover:underline">{post.title}</a>
               </h2>
-              <p class="text-gray-700 mb-4 leading-relaxed">
-                {post.excerpt}
-              </p>
-              <a 
-                href={`/blog/${post.slug}`} 
-                class="text-brand-blue font-semibold hover:underline inline-flex items-center"
-              >
+              <p class="text-gray-700 mb-4 leading-relaxed">{post.description}</p>
+              <a href={`/blog/${post.slug}`} class="text-brand-blue font-semibold hover:underline">
                 Read more →
               </a>
             </article>
@@ -94,14 +86,14 @@ const schema = {
     </div>
   </section>
 
-  <section class="py-16 bg-white">
+  <section class="py-10 md:py-16 bg-gray-50">
     <div class="site-container">
       <div class="max-w-3xl mx-auto text-center">
-        <h2 class="mb-6 text-brand-blue">Ready for an Independent Audit?</h2>
-        <p class="text-lg text-gray-700 mb-8">
-          Stop wondering if your paid media is working. Get a forensic audit with waste quantified in dollars.
+        <h2 class="mb-4 md:mb-6 text-brand-blue">Ready for an Independent Diagnosis?</h2>
+        <p class="text-base md:text-lg text-gray-700 mb-6 md:mb-8">
+          Stop wondering if your paid media is actually working. Get a definitive answer.
         </p>
-        <a href="/contact" class="btn-primary inline-block">Request Your Audit</a>
+        <a href="/contact" class="btn-primary">Request Diagnosis</a>
       </div>
     </div>
   </section>

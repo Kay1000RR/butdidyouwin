@@ -147,7 +147,7 @@ const organizationSchema = {
 <html lang="en" style="scroll-padding-top: 5rem;">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <link rel="canonical" href={canonicalURL} />
     
     <!-- Primary Meta Tags -->
@@ -289,7 +289,7 @@ const organizationSchema = {
         role="navigation"
         aria-label="Mobile navigation"
       >
-        <ul class="site-container mx-auto px-4 md:px-6 lg:px-8 py-5 space-y-3">
+        <ul class="site-container mx-auto px-4 md:px-6 lg:px-8 py-4 md:py-5 space-y-2 md:space-y-3">
           <li><a href="/" class="block py-2 text-lg hover:text-gray-600 transition-colors">Home</a></li>
           <li><a href="/about" class="block py-2 text-lg hover:text-gray-600 transition-colors">About</a></li>
           <li><a href="/method" class="block py-2 text-lg hover:text-gray-600 transition-colors">Method</a></li>
@@ -406,6 +406,23 @@ const organizationSchema = {
       });
     </script>
 
+    <!-- Sticky CTA Bar (Mobile Only) -->
+    <div 
+      id="sticky-cta-bar" 
+      class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-40 md:hidden transform translate-y-full transition-transform duration-300"
+      role="complementary"
+      aria-label="Quick action"
+    >
+      <div class="site-container mx-auto px-4 py-3">
+        <a 
+          href="/contact" 
+          class="block w-full py-3 text-center font-semibold bg-brand-blue text-white rounded hover:bg-brand-blue-dark transition-colors"
+        >
+          Request Diagnosis
+        </a>
+      </div>
+    </div>
+
     <main id="main-content">
       <slot />
     </main>
@@ -478,5 +495,46 @@ const organizationSchema = {
         }
       }
     </style>
+
+    <script>
+      // Sticky CTA Bar - Show on scroll past hero section (mobile only)
+      const stickyCTA = document.getElementById('sticky-cta-bar');
+      let lastScrollY = window.scrollY;
+      let ticking = false;
+
+      function updateStickyCTA() {
+        const scrollY = window.scrollY;
+        const heroHeight = 600; // Approximate hero section height
+        
+        // Show bar when scrolled past hero and scrolling down
+        // Hide when at top or on contact page
+        const isContactPage = window.location.pathname === '/contact' || window.location.pathname === '/contact/';
+        
+        if (!isContactPage && scrollY > heroHeight) {
+          stickyCTA.style.transform = 'translateY(0)';
+        } else {
+          stickyCTA.style.transform = 'translateY(100%)';
+        }
+        
+        lastScrollY = scrollY;
+        ticking = false;
+      }
+
+      function requestTick() {
+        if (!ticking) {
+          window.requestAnimationFrame(updateStickyCTA);
+          ticking = true;
+        }
+      }
+
+      // Initial check
+      updateStickyCTA();
+
+      // Listen for scroll events
+      window.addEventListener('scroll', requestTick, { passive: true });
+
+      // Re-check on page navigation (for SPAs or dynamic content)
+      document.addEventListener('astro:page-load', updateStickyCTA);
+    </script>
   </body>
 </html>
