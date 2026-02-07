@@ -1,0 +1,81 @@
+# robots.txt for butdidyouwin.com
+# Optimized for LLM/AI bot discoverability
+# Last updated: 2025-02-07
+
+User-agent: *
+Allow: /
+
+# ===========================================
+# AI/LLM Crawlers - Explicitly Welcome
+# ===========================================
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# ===========================================
+# Standard Search Engines
+# ===========================================
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# ===========================================
+# Sitemap Location
+# ===========================================
+
+Sitemap: https://butdidyouwin.com/sitemap-index.xml
+
+# ===========================================
+# AI-Readable Content
+# ===========================================
+# Machine-readable business summary: /llms.txt
+# RSS Feed: /rss.xml
+# Structured data on every page via JSON-LD
