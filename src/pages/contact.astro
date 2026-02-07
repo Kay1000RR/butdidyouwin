@@ -31,10 +31,6 @@ const schema = {
           This form helps determine fit and scope before we schedule a call.
         </p>
 
-        <p class="text-center text-gray-600 text-sm md:text-base mb-8 md:mb-12">
-          Used to qualify scope, data access, and economic fit before any engagement.
-        </p>
-
         <!-- HubSpot form - loader-based embed -->
         <div 
           class="hs-form-frame"
@@ -78,16 +74,28 @@ const schema = {
     </div>
   </section>
 
-  <!-- HubSpot form styling -->
+  <!-- HubSpot form styling - FIXED -->
   <style is:global>
-    /* Ensure HubSpot form inputs don't zoom on iOS */
+    /* Force HubSpot form container to display */
+    .hs-form-frame {
+      min-height: 500px !important;
+      height: auto !important;
+    }
+    
+    .hs-form-frame iframe {
+      visibility: visible !important;
+      min-height: 500px !important;
+      height: auto !important;
+    }
+    
+    /* Prevent iOS zoom on form inputs */
     .hs-form-frame input,
     .hs-form-frame select,
     .hs-form-frame textarea {
       font-size: 16px !important;
     }
     
-    /* Tighten HubSpot form spacing on mobile */
+    /* Mobile form spacing */
     @media (max-width: 639px) {
       .hs-form-frame .hs-form-field {
         margin-bottom: 1rem;
