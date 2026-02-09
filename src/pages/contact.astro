@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -7,73 +7,46 @@ const schema = {
   "mainEntity": {
     "@type": "ProfessionalService",
     "name": "BUT DID YOU WIN",
-    "areaServed": "US",
-    "availableLanguage": "English",
     "contactPoint": {
       "@type": "ContactPoint",
-      "contactType": "Customer service",
-      "telephone": "+1-702-710-9325",
-      "email": "kay@butdidyouwin.com",
-      "areaServed": "US"
+      "contactType": "Customer Service",
+      "areaServed": "US",
+      "availableLanguage": "English"
     }
   }
 };
 ---
 
-<BaseLayout
-  title="Request a Paid Media Diagnosis | BUT DID YOU WIN"
-  description="Request a forensic paid media diagnosis. Independent evaluation of revenue impact, sales friction, and capital allocation."
+<BaseLayout 
+  title="Contact Us | BUT DID YOU WIN - Request Paid Media Diagnosis"
+  description="Request a forensic paid media diagnosis or discuss evaluation services. Independent judgment with money-back guarantee."
   schema={schema}
 >
   <section class="py-10 md:py-16 bg-white">
     <div class="site-container">
       <div class="max-w-4xl mx-auto">
+        <h1 class="text-center mb-4 md:mb-6 text-brand-blue">Request a Diagnosis</h1>
 
-        <header class="text-center mb-8 md:mb-12">
-          <h1 class="mb-4 md:mb-6 text-brand-blue">
-            Request a Diagnosis
-          </h1>
+        <p class="text-lg md:text-xl text-center text-gray-700 mb-3 md:mb-4 leading-relaxed">
+          This form helps determine fit and scope before we schedule a call.
+        </p>
 
-          <p class="text-lg md:text-xl text-gray-700 mb-2 leading-relaxed">
-            This form helps determine fit and scope before we schedule a call.
-          </p>
+        <p class="text-center text-gray-600 text-sm md:text-base mb-8 md:mb-12">
+          Used to qualify scope, data access, and economic fit before any engagement.
+        </p>
 
-        <!-- HubSpot form mount point -->
+        <!-- HubSpot form embed (new loader-based embed) -->
         <div
-          id="hubspot-contact-form"
-          class="hubspot-form-wrapper"
-          aria-live="polite"
-        ></div>
-
-        <!-- HubSpot embed (static-site safe) -->
-        <script src="https://js.hsforms.net/forms/embed/v2.js"></script>
-        <script is:inline>
-          window.addEventListener("load", function () {
-            if (window.hbspt && document.getElementById("hubspot-contact-form")) {
-              window.hbspt.forms.create({
-                region: "na2",
-                portalId: "245098442",
-                formId: "44ac1cf6-48ed-4783-9956-01b43cd4a3f0",
-                target: "#hubspot-contact-form"
-              });
-            }
-          });
-        </script>
-
-        <!-- Money-back guarantee -->
-        <div class="bg-brand-blue text-white p-6 rounded-lg mt-10">
-          <p class="text-sm font-semibold mb-2">
-            Money-Back Guarantee
-          </p>
-          <p class="text-sm opacity-90">
-            If the diagnosis does not uncover at least its fee in identifiable inefficiency,
-            you receive a full refund. No questions.
-          </p>
+          class="hs-form-frame"
+          data-region="na2"
+          data-portal-id="245098442"
+          data-form-id="44ac1cf6-48ed-4783-9956-01b43cd4a3f0">
         </div>
 
-        <p class="text-sm text-gray-500 text-center mt-4">
-          No sales call. No agency pitch. Just a fit conversation.
-        </p>
+        <script
+          src="https://js-na2.hsforms.net/forms/embed/245098442.js"
+          is:inline>
+        </script>
 
       </div>
     </div>
@@ -82,29 +55,19 @@ const schema = {
   <section class="py-10 md:py-16 bg-gray-50">
     <div class="site-container">
       <div class="max-w-4xl mx-auto text-center">
+        <h2 class="mb-4 md:mb-6 text-brand-blue">Direct Contact</h2>
 
-        <h2 class="mb-4 md:mb-6 text-brand-blue">
-          Direct Contact
-        </h2>
-
-        <address class="not-italic space-y-3 md:space-y-4 text-base md:text-lg text-gray-700">
-
+        <div class="space-y-3 md:space-y-4 text-base md:text-lg text-gray-700">
           <p>
             <strong class="block sm:inline">Phone:</strong>
-            <a
-              href="tel:+17027109325"
-              class="text-brand-blue hover:underline"
-            >
+            <a href="tel:+17027109325" class="text-brand-blue hover:underline">
               (702) 710-9325
             </a>
           </p>
 
           <p>
             <strong class="block sm:inline">Email:</strong>
-            <a
-              href="mailto:kay@butdidyouwin.com"
-              class="text-brand-blue hover:underline break-all sm:break-normal"
-            >
+            <a href="mailto:kay@butdidyouwin.com" class="text-brand-blue hover:underline break-all sm:break-normal">
               kay@butdidyouwin.com
             </a>
           </p>
@@ -113,48 +76,34 @@ const schema = {
             <strong class="block sm:inline">Location:</strong>
             <span>Las Vegas, Nevada</span>
           </p>
-
-        </address>
-
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- HubSpot styling (safe + minimal + mobile hardened) -->
+  <!-- HubSpot form mobile overrides -->
   <style is:global>
-    #hubspot-contact-form {
-      width: 100%;
-      min-height: 420px;
-    }
-
-    #hubspot-contact-form iframe {
-      width: 100% !important;
-      border: 0 !important;
-      min-height: 420px;
-    }
-
-    /* Prevent mobile zoom on iOS */
-    #hubspot-contact-form input,
-    #hubspot-contact-form select,
-    #hubspot-contact-form textarea {
+    /* Ensure HubSpot form inputs don't zoom on iOS */
+    .hs-form-frame input,
+    .hs-form-frame select,
+    .hs-form-frame textarea {
       font-size: 16px !important;
     }
-
-    /* Improve spacing consistency */
-    #hubspot-contact-form .hs-form-field {
-      margin-bottom: 1rem;
-    }
-
-    #hubspot-contact-form .hs-button {
-      padding: 0.75rem 1.25rem;
-      border-radius: 0.375rem;
-    }
-
-    @media (max-width: 640px) {
-      #hubspot-contact-form iframe {
-        min-height: 520px;
+    
+    /* Tighten HubSpot form spacing on mobile */
+    @media (max-width: 639px) {
+      .hs-form-frame .hs-form-field {
+        margin-bottom: 1rem;
+      }
+      
+      .hs-form-frame .hs-input {
+        padding: 0.625rem 0.75rem;
+      }
+      
+      .hs-form-frame .hs-button {
+        width: 100%;
+        padding: 0.875rem 1.5rem;
       }
     }
   </style>
-
 </BaseLayout>

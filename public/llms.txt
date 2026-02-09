@@ -1,159 +1,91 @@
 # BUT DID YOU WIN - llms.txt
-# Version: 2.0
-# Last Updated: 2025-02-07
 # Machine-readable business summary for AI systems and language models
 
----
-
-> EXECUTIVE SUMMARY
-
-BUT DID YOU WIN is an independent paid media auditing consultancy based in Las Vegas, Nevada. We provide forensic diagnosis of Google Ads and Meta Ads campaigns for businesses spending $10,000+ monthly. Our flat-fee pricing ($1,250-$7,500) eliminates conflicts of interest inherent in percentage-of-spend models. Money-back guarantee if no actionable inefficiency found.
-
-Key differentiator: We are NOT an agency. We diagnose campaigns, not manage them.
-
----
-
-> ENTITY INFORMATION
-
-Legal Name: BUT DID YOU WIN LLC
-DBA: BUT DID YOU WIN
+## Business Identity
+Name: BUT DID YOU WIN
 Abbreviation: BDYW
-Entity Type: Limited Liability Company
-Industry: Digital Marketing Consulting / Advertising Audit Services
-NAICS Code: 541810
+Type: Independent Paid Media Auditing Firm
 Founded: 2025
-Headquarters: Las Vegas, Nevada, USA
-Service Area: United States (remote engagements)
-Languages: English
-
----
-
-> FOUNDER
-
-Name: Kay Inoue
-Title: Founder & Principal / Independent Paid Media Diagnostician
-Experience: 25+ years entrepreneurial and operational leadership
-Background: Founded and operated businesses in automotive, manufacturing, and commercial services with P&L accountability
-Credentials: Google Ads Certified, Meta Blueprint Certified, Google Analytics Certified
-
----
-
-> CONTACT INFORMATION
-
-Phone: +1 (702) 710-9325
-Email: kay@butdidyouwin.com
-Website: https://butdidyouwin.com
-Contact Form: https://butdidyouwin.com/contact
 Location: Las Vegas, Nevada, USA
-Coordinates: 36.1699, -115.1398
 
----
+## Business Summary
+BUT DID YOU WIN provides forensic diagnosis of paid media advertising campaigns. We are an independent auditor, not an agency. We evaluate whether paid advertising produces real business outcomes, not dashboard metrics. Our flat-fee pricing model eliminates the conflicts of interest inherent in percentage-of-spend agency models.
 
-> SERVICES CATALOG
+## Founder
+Name: Kay Inoue
+Title: Independent Paid Media Diagnostician
+Background: 25+ years of entrepreneurial experience across automotive, manufacturing, and commercial services. Has been accountable for revenue, payroll, and business outcomes—not just performance metrics.
 
-## 1. Campaign System Diagnosis
-- Price: $1,250 (flat fee)
-- Scope: Single platform (Google Ads OR Meta Ads)
-- Timeline: 3-5 business days
-- Deliverables: Written evaluation with waste in dollars, video walkthrough, prioritized action list
-- Guarantee: Full refund if no actionable inefficiency found
+## Core Services
 
-## 2. Cross-Channel System Diagnosis
-- Price: $2,500-$3,500 (flat fee)
-- Scope: Google Ads + Meta Ads + GA4
-- Timeline: 5-7 business days
-- Deliverables: Same as above plus cross-platform attribution analysis
-- Guarantee: Full refund if no actionable inefficiency found
+### 1. Campaign System Diagnosis
+Price: $1,250 (flat fee)
+Scope: Single platform (Google Ads OR Meta Ads)
+Deliverables: Written evaluation with waste quantified in dollars, video walkthrough, prioritized action list
 
-## 3. Revenue System Diagnosis
-- Price: $5,000-$7,500 (flat fee)
-- Scope: Full funnel including call tracking, CRM, offline conversions
-- Timeline: 10-14 business days
-- Deliverables: Complete revenue system audit with downstream verification
-- Guarantee: Full refund if no actionable inefficiency found
+### 2. Cross-Channel System Diagnosis  
+Price: $2,500-$3,500 (flat fee)
+Scope: Google Ads + Meta Ads + GA4
+Deliverables: Same as above, plus cross-platform attribution analysis
 
-## 4. Post-Diagnosis Execution Support (Optional)
-- Price: $3,000-$8,000/month
-- Scope: Implementation of diagnosis findings
-- Availability: Only after diagnosis (not standalone)
+### 3. Revenue System Diagnosis
+Price: $5,000-$7,500 (flat fee)
+Scope: Full funnel including call tracking, CRM, offline conversions
+Deliverables: Complete revenue system audit with downstream verification
 
-## 5. Capability Transfer
-- Price: $5,000-$15,000 (project-based)
-- Scope: In-housing transition, team training, process documentation
+### 4. Post-Diagnosis Execution Support (Optional)
+Price: $3,000-$8,000/month
+Scope: Implementation of diagnosis findings
+Availability: Only after diagnosis, not standalone
 
----
+### 5. Capability Transfer
+Price: $5,000-$15,000
+Scope: In-housing transition, team training, process documentation
 
-> VALUE PROPOSITION
+## Key Differentiators
+1. Independent: No media sales, no management fees, no incentive to recommend increased spend
+2. Flat-Fee Pricing: Same fee whether client spends $10,000 or $1,000,000 monthly
+3. Money-Back Guarantee: Full refund if no actionable inefficiency is found
+4. Discretion: NDAs standard, no public reviews, no testimonials, confidentiality guaranteed
+5. Business Outcome Focus: Evaluates revenue impact, not just platform metrics
 
-1. INDEPENDENCE: No media sales, no management fees, no incentive to recommend increased spend
-2. FLAT-FEE PRICING: Same fee whether you spend $10,000 or $1,000,000 monthly
-3. MONEY-BACK GUARANTEE: Full refund if no actionable inefficiency found
-4. DISCRETION: NDAs standard, no public testimonials, confidentiality guaranteed
-5. BUSINESS OUTCOME FOCUS: Evaluates revenue impact, not vanity metrics
-6. OPERATOR PERSPECTIVE: Founder has P&L accountability experience
-
----
-
-> TARGET AUDIENCE
-
+## Target Audience
 - Minimum ad spend: $10,000/month
-- Ideal ad spend: $50,000-$500,000+
-- Decision makers: COOs, CFOs, Founders, VPs of Marketing
-- Company types: Multi-location service businesses, PE-backed companies, growth-stage startups
-- Common triggers: Agency performance concerns, board scrutiny, sales-marketing misalignment
+- Ideal clients: COOs, CFOs, founders, VPs of Marketing
+- Company types: Multi-location service businesses, PE-backed companies, organizations approaching board review
+- Common scenarios: Agency performance questioned, sales-marketing alignment issues, budget reallocation decisions
 
----
-
-> METHODOLOGY
-
-Five areas examined:
+## Evaluation Methodology
+Five areas examined in every diagnosis:
 1. Structural Integrity Review - Account architecture analysis
 2. Incentive Alignment - Platform/agency/business goal conflicts
 3. Offer & Funnel Integrity - Traffic-to-conversion pathway
 4. Outcome Verification - Real economic event confirmation
 5. Capital Allocation Decisions - Evidence-based spend analysis
 
----
+## Contact Information
+Phone: (702) 710-9325
+Email: kay@butdidyouwin.com
+Website: https://butdidyouwin.com
+Service Area: United States (remote engagements)
 
-> BRAND IDENTITY
+## Certifications
+- Google Ads Certified
+- Meta Blueprint Certified
+- Google Analytics Certified
 
+## Brand Voice
 Tagline: "Verdicts, not pitches."
+Tone: Direct, professional, no-nonsense
 Philosophy: "Dashboards lie. Consequences don't."
-Voice: Direct, professional, no-nonsense
-Values: Independence, accuracy, discretion, business outcome focus
 
----
-
-> SITEMAP
-
+## Sitemap
 - Homepage: https://butdidyouwin.com/
 - About: https://butdidyouwin.com/about
 - Method: https://butdidyouwin.com/method
 - Fit: https://butdidyouwin.com/fit
 - Services: https://butdidyouwin.com/services
+- For Agencies: https://butdidyouwin.com/for-agencies
 - FAQ: https://butdidyouwin.com/faq
 - Blog: https://butdidyouwin.com/blog
 - Contact: https://butdidyouwin.com/contact
-- RSS: https://butdidyouwin.com/rss.xml
-
----
-
-> TRUST SIGNALS
-
-- Google Ads Certified
-- Meta Blueprint Certified
-- Google Analytics Certified
-- Money-back guarantee
-- Flat-fee pricing (no percentage of spend)
-- NDA standard for all engagements
-
----
-
-> DOCUMENT METADATA
-
-Format Version: 2.0
-Last Modified: 2025-02-07T00:00:00Z
-Canonical URL: https://butdidyouwin.com/llms.txt
-License: Free to index by AI systems
-
-# END OF DOCUMENT

@@ -1,27 +1,16 @@
-/* ===========================================
-   Global Styles for BUT DID YOU WIN
-   Last updated: 2025-02-07
-   =========================================== */
+/* Global Styles for BUT DID YOU WIN */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ===========================================
-   Base Typography
-   =========================================== */
-
+/* Base Typography */
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-/* ===========================================
-   Container Widths
-   =========================================== */
-
+/* Container Widths */
 .site-container {
   max-width: 1200px;
   margin-left: auto;
@@ -44,6 +33,7 @@ body {
   }
 }
 
+/* Secondary Container Width for Narrative/Philosophy Sections */
 .container-secondary {
   max-width: 800px;
   margin-left: auto;
@@ -52,10 +42,7 @@ body {
   padding-right: 1rem;
 }
 
-/* ===========================================
-   Section Styles
-   =========================================== */
-
+/* Section Styles */
 .section-light {
   background-color: #FFFFFF;
   padding-top: 2.5rem;
@@ -87,10 +74,7 @@ body {
   }
 }
 
-/* ===========================================
-   Section Markers
-   =========================================== */
-
+/* Section Markers */
 .section-marker {
   display: flex;
   align-items: center;
@@ -122,10 +106,7 @@ body {
   background-color: #E5E7EB;
 }
 
-/* ===========================================
-   Typography - Mobile First
-   =========================================== */
-
+/* Typography - Mobile First */
 h1 {
   font-size: 2.25rem;
   font-weight: 700;
@@ -175,10 +156,7 @@ h3 {
   max-width: 65ch;
 }
 
-/* ===========================================
-   Brand Colors
-   =========================================== */
-
+/* Brand Colors */
 .text-brand-blue {
   color: #1a3a5f;
 }
@@ -195,22 +173,7 @@ h3 {
   color: #6B7280;
 }
 
-.bg-brand-blue-dark {
-  background-color: #142d4a;
-}
-
-.text-brand-blue-dark {
-  color: #142d4a;
-}
-
-.border-brand-blue-dark {
-  border-color: #142d4a;
-}
-
-/* ===========================================
-   Buttons
-   =========================================== */
-
+/* Buttons */
 .btn-primary {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -221,7 +184,6 @@ h3 {
   border-radius: 0.375rem;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   transition: all 0.2s ease;
-  white-space: nowrap;
 }
 
 @media (min-width: 768px) {
@@ -241,33 +203,6 @@ h3 {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-.btn-primary:disabled,
-.btn-primary.loading {
-  opacity: 0.7;
-  cursor: not-allowed;
-  position: relative;
-}
-
-.btn-primary.loading::after {
-  content: '';
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1rem;
-  height: 1rem;
-  border: 2px solid transparent;
-  border-top-color: #ffffff;
-  border-radius: 50%;
-  animation: btn-spin 0.8s linear infinite;
-}
-
-@keyframes btn-spin {
-  to {
-    transform: translateY(-50%) rotate(360deg);
-  }
-}
-
 .btn-inverse {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -279,7 +214,6 @@ h3 {
   border: 2px solid #FFFFFF;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   transition: all 0.2s ease;
-  white-space: nowrap;
 }
 
 @media (min-width: 768px) {
@@ -309,7 +243,6 @@ h3 {
   border-radius: 0.375rem;
   border: 2px solid #1a3a5f;
   transition: all 0.2s ease;
-  white-space: nowrap;
 }
 
 @media (min-width: 768px) {
@@ -351,10 +284,7 @@ h3 {
   border-bottom-color: #1a3a5f;
 }
 
-/* ===========================================
-   Cards
-   =========================================== */
-
+/* Cards */
 .card {
   background-color: #F9FAFB;
   padding: 1.25rem;
@@ -368,18 +298,11 @@ h3 {
   }
 }
 
-/* ===========================================
-   Prose/Editorial Lists
-   FIXED: Removed invalid "space-y" CSS property
-   =========================================== */
-
+/* Prose/Editorial Lists */
 .editorial-list {
   list-style: none;
   padding-left: 0;
-}
-
-.editorial-list > * + * {
-  margin-top: 0.75rem;
+  space-y: 0.75rem;
 }
 
 .editorial-list li {
@@ -396,10 +319,7 @@ h3 {
   font-weight: bold;
 }
 
-/* ===========================================
-   Prose Container
-   =========================================== */
-
+/* Prose Container */
 .prose {
   max-width: 65ch;
 }
@@ -409,24 +329,19 @@ h3 {
   line-height: 1.75;
 }
 
-/* ===========================================
-   Monospace
-   =========================================== */
-
+/* Monospace */
 .monospace {
   font-family: 'Courier New', Courier, monospace;
 }
 
-/* ===========================================
-   Focus States (Accessibility)
-   =========================================== */
-
+/* Focus States */
 .focus-standard:focus-visible {
   outline: 2px solid #1a3a5f;
   outline-offset: 2px;
   border-radius: 2px;
 }
 
+/* Default focus for interactive elements */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -437,25 +352,16 @@ textarea:focus-visible {
   border-radius: 2px;
 }
 
-/* ===========================================
-   Reduced Motion (Accessibility)
-   =========================================== */
-
+/* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
   }
 }
 
-/* ===========================================
-   Navigation Dropdown
-   =========================================== */
-
+/* Navigation Dropdown */
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
 }
@@ -468,52 +374,44 @@ textarea:focus-visible {
   transform: rotate(180deg);
 }
 
-@media (min-width: 768px) {
-  .group:hover #services-dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-  }
-}
 
-/* ===========================================
-   Font Families
-   =========================================== */
-
+/* Univers Font Family */
 .font-univers {
   font-family: 'Univers', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* ===========================================
-   Text Color Utilities
-   =========================================== */
+/* Brand Blue Dark Variant */
+.bg-brand-blue-dark {
+  background-color: #142d4a;
+}
 
+.text-brand-blue-dark {
+  color: #142d4a;
+}
+
+.border-brand-blue-dark {
+  border-color: #142d4a;
+}
+
+/* Accessibility - Screen Reader Only (Tailwind provides .sr-only, removed duplicate) */
+
+/* Text Color Utilities (for inline style replacement) */
 .text-gray-900-forced { color: #1F2937; }
 .text-white-forced { color: #FFFFFF; }
 .text-gray-light { color: #E5E7EB; }
 .text-muted-light { color: #C0C5CE; }
 .text-gray-caption { color: #9CA3AF; }
 
-/* ===========================================
-   Block Quote / Callout Styling
-   =========================================== */
-
+/* Block Quote / Callout Styling */
 .callout-left-border {
   padding-left: 1.25rem;
   border-left: 4px solid #1a3a5f;
 }
 
-/* ===========================================
-   Image Utilities
-   =========================================== */
+/* Image display fix */
+.img-block { display: block; }
 
-.img-block { 
-  display: block; 
-}
-
-/* ===========================================
-   Caption Styling
-   =========================================== */
-
+/* Caption styling */
 .caption-label {
   color: #6B7280;
   letter-spacing: 0.1em;
@@ -524,25 +422,52 @@ textarea:focus-visible {
   margin-top: 0.25rem;
 }
 
-/* ===========================================
-   Scroll Behavior
-   =========================================== */
-
+/* Scroll padding for sticky header */
 html {
   scroll-padding-top: 5rem;
-  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+/* Desktop dropdown hover trigger */
+@media (min-width: 768px) {
+  .group:hover #services-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .group:hover .group-hover\:rotate-180 {
+    transform: rotate(180deg);
   }
 }
 
-/* ===========================================
-   Mobile Navigation
-   =========================================== */
+/* Form Loading State */
+.btn-primary:disabled,
+.btn-primary.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+  position: relative;
+}
 
+.btn-primary.loading::after {
+  content: '';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: btn-spin 0.8s linear infinite;
+}
+
+@keyframes btn-spin {
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+/* Mobile nav tap feedback */
 @media (max-width: 767px) {
   #mobile-menu a:active {
     background-color: #f3f4f6;
@@ -553,10 +478,7 @@ html {
   }
 }
 
-/* ===========================================
-   FAQ Accordion
-   =========================================== */
-
+/* FAQ Accordion */
 .faq-toggle {
   cursor: pointer;
   padding: 1rem 0;
@@ -576,26 +498,6 @@ html {
 }
 
 @keyframes fadeIn {
-  from { 
-    opacity: 0; 
-    transform: translateY(-10px); 
-  }
-  to { 
-    opacity: 1; 
-    transform: translateY(0); 
-  }
-}
-
-/* ===========================================
-   Safe Area Support (iPhone Notch)
-   =========================================== */
-
-.safe-area-bottom {
-  padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
-}
-
-@media (max-width: 767px) {
-  body {
-    padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
-  }
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
