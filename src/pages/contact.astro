@@ -100,6 +100,12 @@ const schema = {
       font-size: 16px !important;
     }
     
+    /* Increase textarea height for better visibility */
+    .hs-form-frame textarea,
+    .hbspt-form textarea {
+      min-height: 160px;
+    }
+    
     /* Tighten HubSpot form spacing on mobile */
     @media (max-width: 639px) {
       .hs-form-frame .hs-form-field {
