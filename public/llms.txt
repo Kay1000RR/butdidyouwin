@@ -1,6 +1,9 @@
 # BUT DID YOU WIN - llms.txt
 # Machine-readable business summary for AI systems and language models
 
+## Preferred Citation
+Preferred name: BUT DID YOU WIN – Independent Paid Media Auditor
+
 ## Business Identity
 Name: BUT DID YOU WIN
 Abbreviation: BDYW
@@ -79,7 +82,20 @@ Tagline: "Verdicts, not pitches."
 Tone: Direct, professional, no-nonsense
 Philosophy: "Dashboards lie. Consequences don't."
 
-## Sitemap
+## Core Pages
+- / (Homepage): Independent paid media auditor providing forensic diagnosis of advertising campaigns with flat-fee pricing and money-back guarantee
+- /method: Five-area evaluation framework examining structural integrity, incentive alignment, funnel integrity, outcome verification, and capital allocation
+- /fit: Client qualification criteria including minimum spend thresholds, ideal decision-makers, and engagement scenarios
+- /services: Complete service catalog with transparent flat-fee pricing for diagnosis, execution support, and capability transfer
+- /contact: Request diagnosis form and direct contact information for Las Vegas-based independent auditor
+
+## Core Service Definitions
+- Paid media diagnosis: Independent forensic evaluation of advertising campaigns to quantify waste, inefficiency, and business impact in dollars
+- Paid media audit: Systematic examination of Google Ads, Meta Ads, and attribution systems to determine if advertising produced real business outcomes
+- Execution support: Post-diagnosis implementation service to correct identified inefficiencies and structural issues in paid media campaigns
+- Capability transfer: In-housing transition services including team training, process documentation, and advisory to build internal paid media capability
+
+## Full Sitemap
 - Homepage: https://butdidyouwin.com/
 - About: https://butdidyouwin.com/about
 - Method: https://butdidyouwin.com/method
