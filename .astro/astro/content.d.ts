@@ -148,6 +148,20 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"The_Senior_Strategist_Who_Pitched_You_Isnt_Managing_Your_Account.md": {
+	id: "The_Senior_Strategist_Who_Pitched_You_Isnt_Managing_Your_Account.md";
+  slug: "the_senior_strategist_who_pitched_you_isnt_managing_your_account";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"Your_Lead_Gen_Is_Training_Google_to_Find_Worse_Leads.md": {
+	id: "Your_Lead_Gen_Is_Training_Google_to_Find_Worse_Leads.md";
+  slug: "your_lead_gen_is_training_google_to_find_worse_leads";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 };
 
 	};
