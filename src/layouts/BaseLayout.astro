@@ -214,17 +214,15 @@ const organizationSchema = {
     
     <meta name="generator" content={Astro.generator} />
 
-    <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-570BH85RLH"></script>
-  <script is:inline>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-570BH85RLH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    gtag('config', 'G-570BH85RLH', {
-    anonymize_ip: true
-    });
-  </script>
+      gtag('config', 'G-570BH85RLH');
+    </script>
 
     <style is:global>
     .article-prose {
