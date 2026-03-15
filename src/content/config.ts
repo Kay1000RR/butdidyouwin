@@ -1,15 +1,15 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection, z } from 'astro:content';
 
 const blog = defineCollection({
-  type: "content",
+  type: 'content',
   schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    pubDate: z.string(),
-    updatedDate: z.string().optional(),
+    title: z.string().min(1),
+    description: z.string().min(1),
+    pubDate: z.coerce.date(),
+    updatedDate: z.coerce.date().optional(),
     canonical: z.string().url().optional(),
-    author: z.string().optional(),
-    draft: z.boolean().optional(),
+    author: z.string().default('Kay Inoue'),
+    draft: z.boolean().default(false),
   }),
 });
 

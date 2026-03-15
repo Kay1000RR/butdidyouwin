@@ -1,36 +1,29 @@
 import rss from '@astrojs/rss';
+import { getCollection } from 'astro:content';
 
 export async function GET(context) {
+  const posts = await getCollection('blog');
+
+  const published = posts
+    .filter((post) => post.data.draft !== true)
+    .sort(
+      (a, b) =>
+        new Date(b.data.pubDate).getTime() -
+        new Date(a.data.pubDate).getTime()
+    );
+
   return rss({
     title: 'BUT DID YOU WIN Blog',
-    description: 'Insights on paid media diagnosis, advertising efficiency, and business outcomes from an independent auditor.',
+    description:
+      'Independent forensic writing on paid media, attribution, and capital allocation.',
     site: context.site,
-    items: [
-      {
-        title: '5 Signs Your Paid Media Accounts Need a Fresh Set of Eyes',
-        pubDate: new Date('2025-01-15'),
-        description: 'Even well-managed paid media accounts accumulate inefficiencies over time. Here are five symptoms that suggest it\'s time for an independent evaluation.',
-        link: '/blog/5-signs-fresh-eyes-needed/',
-        author: 'Kay Inoue',
-        categories: ['Paid Media', 'Audit', 'Optimization'],
-      },
-      {
-        title: 'Common Optimization Opportunities in Mature Paid Media Accounts',
-        pubDate: new Date('2025-01-10'),
-        description: 'The hidden cost of wasted ad spend and common inefficiencies found in mature advertising accounts.',
-        link: '/blog/cost-of-wasted-ad-spend/',
-        author: 'Kay Inoue',
-        categories: ['Paid Media', 'Waste', 'Optimization'],
-      },
-      {
-        title: 'How Pricing Models Shape Paid Media Recommendations',
-        pubDate: new Date('2025-01-05'),
-        description: 'Understanding how percentage-of-spend pricing creates conflicts of interest in paid media management.',
-        link: '/blog/percentage-pricing-conflicts/',
-        author: 'Kay Inoue',
-        categories: ['Agency', 'Pricing', 'Conflicts of Interest'],
-      },
-    ],
+    items: published.map((post) => ({
+      title: post.data.title,
+      pubDate: new Date(post.data.pubDate),
+      description: post.data.description,
+      link: `/blog/${post.slug}/`,
+      author: post.data.author ?? 'Kay Inoue',
+    })),
     customData: `
       <language>en-us</language>
       <copyright>© ${new Date().getFullYear()} BUT DID YOU WIN. All rights reserved.</copyright>
