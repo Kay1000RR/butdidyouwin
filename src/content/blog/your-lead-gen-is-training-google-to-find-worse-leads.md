@@ -1,10 +1,10 @@
 ---
 title: "Your Lead Gen Is Training Google to Find Worse Leads. Here's How It Happens."
 description: "A diagnostic framework for identifying whether automated bidding is optimizing for revenue-producing leads or algorithmic noise."
-pubDate: "February 18, 2026"
-updatedDate: "February 18, 2026"
+pubDate: "March 16, 2026"
+updatedDate: "March 16, 2026"
 canonical: "https://butdidyouwin.com/blog/your-lead-gen-is-training-google-to-find-worse-leads"
-draft: true
+draft: false
 author: "Kay Inoue"
 ---
 
