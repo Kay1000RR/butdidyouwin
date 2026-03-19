@@ -1,0 +1,68 @@
+---
+import LogoText from './LogoText.astro';
+import { COMPANY, CONTACT } from '../data/site';
+---
+
+<footer class="bg-white border-t border-gray-200 py-12 mt-20" role="contentinfo">
+  <div class="site-container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="section-marker mb-8">
+      <span class="marker-rule"></span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12">
+      <div>
+        <div class="mb-4"><LogoText /></div>
+        <p class="text-base leading-relaxed text-brand-gray">
+          Independent paid media auditor delivering verdicts, not pitches.
+        </p>
+      </div>
+      <nav aria-label="Services navigation">
+        <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-gray-900">Services</h4>
+        <ul class="space-y-3 text-base">
+          <li>
+            <a href="/services#diagnosis" class="hover:text-gray-600 transition-colors">Diagnosis</a
+            >
+          </li>
+          <li>
+            <a href="/services#execution" class="hover:text-gray-600 transition-colors"
+              >Execution Support</a
+            >
+          </li>
+          <li>
+            <a href="/services#capability" class="hover:text-gray-600 transition-colors"
+              >Capability Transfer</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <nav aria-label="Resources navigation">
+        <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-gray-900">Resources</h4>
+        <ul class="space-y-3 text-base">
+          <li><a href="/faq" class="hover:text-gray-600 transition-colors">FAQ</a></li>
+          <li><a href="/blog" class="hover:text-gray-600 transition-colors">Blog</a></li>
+          <li><a href="/rss.xml" class="hover:text-gray-600 transition-colors">RSS Feed</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-gray-900">Contact</h4>
+        <ul class="space-y-3 text-base">
+          <li class="text-brand-gray">{CONTACT.location.city}, {CONTACT.location.regionFull}</li>
+          <li>
+            <a href={`tel:${CONTACT.phone.raw}`} class="hover:text-gray-600 transition-colors"
+              >{CONTACT.phone.display}</a
+            >
+          </li>
+          <li>
+            <a href={`mailto:${CONTACT.email}`} class="hover:text-gray-600 transition-colors"
+              >{CONTACT.email}</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-200 mt-6 pt-6 text-center text-sm text-brand-gray">
+      <p>&copy; {new Date().getFullYear()} {COMPANY.name}. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
