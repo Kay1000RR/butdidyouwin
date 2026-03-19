@@ -4,7 +4,7 @@
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://js-na2.hsforms.net https://js.hsforms.net https://js.hs-scripts.com https://js.hs-analytics.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://api.hsforms.com https://forms.hsforms.com https://forms-na2.hsforms.com; frame-src https://share.hsforms.com https://forms-na2.hsforms.com
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://js-na2.hsforms.net https://js.hsforms.net https://js.hs-scripts.com https://js.hs-analytics.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://api.hsforms.com https://forms.hsforms.com https://forms-na2.hsforms.com; frame-src https://share.hsforms.com https://forms-na2.hsforms.com https://js-na2.hsforms.net
 
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
