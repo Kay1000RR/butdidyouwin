@@ -1,0 +1,302 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const publishDate = '2025-01-10';
+const modifiedDate = '2025-01-10';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: 'How Pricing Models Shape Paid Media Recommendations',
+  description:
+    'Understanding how different pricing structures create different incentives in paid media management. Not about ethics. Just about math.',
+  datePublished: publishDate,
+  dateModified: modifiedDate,
+  author: {
+    '@type': 'Person',
+    name: 'Kay Inoue',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'BUT DID YOU WIN',
+  },
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['article header', 'article h2', 'article p:first-of-type'],
+  },
+};
+---
+
+<BaseLayout
+  title="How Pricing Models Shape Paid Media Recommendations | BUT DID YOU WIN"
+  description="Understanding how different pricing structures create different incentives in paid media management. Not about ethics. Just about math."
+  schema={schema}
+>
+  <article class="py-16 bg-white">
+    <div class="site-container">
+      <div class="max-w-3xl mx-auto">
+        <header class="mb-12">
+          <h1 class="mb-4 text-brand-blue">How Pricing Models Shape Paid Media Recommendations</h1>
+          <div class="text-gray-600 mb-6">
+            <time datetime="2025-01-10">January 10, 2025</time> · 7 min read
+          </div>
+          <p class="text-xl text-gray-700 leading-relaxed italic border-l-4 border-brand-blue pl-6">
+            Understanding how different pricing structures create different incentives in paid media
+            management. Not about ethics. Just about math.
+          </p>
+        </header>
+
+        <div class="prose prose-lg max-w-none space-y-8">
+          <p>
+            Pricing models aren't neutral. They shape behavior. Not because anyone's dishonest. Just
+            because incentives matter.
+          </p>
+
+          <p>
+            If you get paid more when clients spend more, you'll naturally recommend strategies that
+            increase spend. If you get paid the same regardless of spend, you'll focus on
+            efficiency. Neither approach is inherently wrong. They just optimize for different
+            outcomes.
+          </p>
+
+          <p>Here's how the most common pricing models work and what incentives they create.</p>
+
+          <h2>Percentage of Ad Spend (10-20%)</h2>
+
+          <p>
+            This is the most common model. The provider charges a percentage of your monthly ad
+            spend as their management fee. If you spend $50,000, they earn $5,000-$10,000 depending
+            on the rate.
+          </p>
+
+          <h3>What it incentivizes</h3>
+
+          <p>
+            Revenue grows with ad spend. That means the provider benefits financially when you
+            increase your budget. It doesn't mean they'll recommend bad strategies. It just means
+            they have a structural reason to favor budget increases over optimization.
+          </p>
+
+          <p><strong>Example scenario:</strong></p>
+
+          <p>
+            You're spending $50,000/month at $200 cost per lead, generating 250 leads. Your provider
+            has two options:
+          </p>
+
+          <ul>
+            <li>
+              <strong>Option A:</strong> Optimize targeting to reduce cost per lead to $150. Same budget,
+              333 leads. Provider still earns $7,500 (at 15%).
+            </li>
+            <li>
+              <strong>Option B:</strong> Recommend increasing budget to $75,000. Even at $200 cost per
+              lead, you get 375 leads. Provider now earns $11,250.
+            </li>
+          </ul>
+
+          <p>
+            Both options deliver more leads. But Option B is 50% more profitable for the provider.
+            That doesn't make it the wrong choice. It just means the pricing model naturally favors
+            it.
+          </p>
+
+          <h3>When this model works well</h3>
+
+          <ul>
+            <li>You're in a growth phase and need to scale spend aggressively</li>
+            <li>Your constraint is execution capacity, not budget efficiency</li>
+            <li>You have strong internal oversight to verify recommendations</li>
+          </ul>
+
+          <h3>When this model creates tension</h3>
+
+          <ul>
+            <li>You're focused on profitability and need to reduce waste</li>
+            <li>You suspect inefficiencies but can't get objective evaluation</li>
+            <li>Budget recommendations always trend upward regardless of performance</li>
+          </ul>
+
+          <h2>Flat-Fee Monthly Retainer</h2>
+
+          <p>
+            The provider charges a fixed monthly fee regardless of ad spend. Whether you spend
+            $10,000 or $100,000, they earn the same amount.
+          </p>
+
+          <h3>What it incentivizes</h3>
+
+          <p>
+            Efficiency. Since revenue doesn't grow with spend, the provider has no financial reason
+            to recommend budget increases. They're more likely to focus on optimization, waste
+            reduction, and improving ROAS.
+          </p>
+
+          <p>
+            The tradeoff: they also have less incentive to push for aggressive scaling. If you want
+            to grow fast, you may need to drive that conversation yourself.
+          </p>
+
+          <h3>When this model works well</h3>
+
+          <ul>
+            <li>You want optimization and efficiency, not aggressive scaling</li>
+            <li>You have a fixed budget and need to maximize results within it</li>
+            <li>
+              You value independence and want recommendations that aren't tied to spend volume
+            </li>
+          </ul>
+
+          <h3>When this model creates tension</h3>
+
+          <ul>
+            <li>You're in rapid growth mode and need someone pushing for scale</li>
+            <li>Your spend fluctuates significantly month to month</li>
+            <li>The provider's workload increases but their fee doesn't</li>
+          </ul>
+
+          <h2>Performance-Based (% of Revenue or Profit)</h2>
+
+          <p>
+            The provider earns a percentage of the revenue or profit generated by the campaigns. If
+            campaigns drive $500,000 in revenue, they may earn 5-10% of that.
+          </p>
+
+          <h3>What it incentivizes</h3>
+
+          <p>
+            Outcomes. The provider only makes money if campaigns actually drive business results.
+            This aligns incentives well in theory.
+          </p>
+
+          <p>
+            The challenge: attribution. Paid media rarely operates in isolation. If someone sees
+            your ad, then Googles your brand, then converts three days later, how much credit does
+            the ad get? These debates can get messy.
+          </p>
+
+          <h3>When this model works well</h3>
+
+          <ul>
+            <li>You have clean attribution and can accurately track revenue to campaigns</li>
+            <li>You're willing to share revenue data with an external provider</li>
+            <li>You want maximum alignment on business outcomes</li>
+          </ul>
+
+          <h3>When this model creates tension</h3>
+
+          <ul>
+            <li>Attribution is complex or disputed</li>
+            <li>You're not comfortable sharing detailed revenue data</li>
+            <li>The provider takes on significant risk if campaigns underperform</li>
+          </ul>
+
+          <h2>Hourly or Project-Based</h2>
+
+          <p>
+            The provider charges for time worked, either hourly or as a fixed project fee. Common
+            for audits, consulting, or short-term engagements.
+          </p>
+
+          <h3>What it incentivizes</h3>
+
+          <p>
+            Depends on the structure. Hourly billing can incentivize more hours worked. Project
+            billing incentivizes efficiency (finish faster, keep more margin). Neither is tied to
+            your ad spend or results.
+          </p>
+
+          <h3>When this model works well</h3>
+
+          <ul>
+            <li>You need a one-time audit or strategic review</li>
+            <li>You want to pay for expertise without ongoing commitment</li>
+            <li>You're building an in-house team and need training or transition support</li>
+          </ul>
+
+          <h3>When this model creates tension</h3>
+
+          <ul>
+            <li>
+              Ongoing management requires continuous work, making hourly billing unpredictable
+            </li>
+            <li>You want someone accountable for results, not just hours logged</li>
+          </ul>
+
+          <h2>Why This Matters</h2>
+
+          <p>
+            Pricing models aren't just about cost. They shape what gets recommended and how success
+            is measured.
+          </p>
+
+          <p>
+            If you're paying percentage of spend, expect recommendations that favor budget
+            increases. That's not dishonesty. It's just how the model works.
+          </p>
+
+          <p>
+            If you're paying flat fees, expect more focus on efficiency and optimization. Again, not
+            because flat-fee providers are more ethical. Just because that's what the model rewards.
+          </p>
+
+          <p>
+            The question isn't which model is "best." It's which model aligns with what you're
+            trying to accomplish right now.
+          </p>
+
+          <h2>How to Choose</h2>
+
+          <p>Ask yourself:</p>
+
+          <ul>
+            <li>
+              <strong>Are you optimizing for growth or efficiency?</strong> Growth favors percentage models.
+              Efficiency favors flat fees.
+            </li>
+            <li>
+              <strong>Do you trust your current provider's recommendations?</strong> If not, consider
+              getting an independent audit from someone with no stake in your spend volume.
+            </li>
+            <li>
+              <strong>How much oversight do you have?</strong> Percentage models work fine if you have
+              strong internal oversight. Without it, they can drift toward spend inflation.
+            </li>
+            <li>
+              <strong>What's your budget flexibility?</strong> If budget is tight, flat fees give you
+              predictability. If budget is flexible, percentage models scale with your needs.
+            </li>
+          </ul>
+
+          <p>
+            There's no universal answer. Just tradeoffs. The key is understanding what incentives
+            you're creating and whether they align with your goals.
+          </p>
+        </div>
+
+        <div class="mt-12 pt-8 border-t">
+          <div class="card">
+            <h3 class="text-2xl font-bold mb-4 text-brand-blue">
+              Get an independent paid media verdict
+            </h3>
+            <p class="text-gray-700 mb-4">
+              I evaluate whether your paid media is producing real business outcomes, not prettier
+              dashboards.
+            </p>
+            <p class="text-gray-700 mb-4">
+              This diagnostic determines whether revenue impact, sales behavior, attribution
+              integrity, and capital allocation discipline actually hold up under scrutiny.
+            </p>
+            <p class="text-gray-700 mb-6">No agency pitch. No optimization retainer.</p>
+            <p class="text-gray-700 mb-6">Just an independent decision-grade assessment.</p>
+            <a href="/contact" class="btn-primary inline-block">Request a diagnostic</a>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center">
+          <a href="/blog" class="text-brand-blue font-semibold hover:underline">← Back to Blog</a>
+        </div>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

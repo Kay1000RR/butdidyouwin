@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqs = [
+  {
+    question: 'What decisions are typically made after a diagnosis?',
+    answer:
+      'Terminate or retain an agency. Reallocate budget across channels. Pause spend pending funnel repair. Bring media in-house. Accept that spend is working and move on confidently. The goal is defensible business decisions, not optimization theater.',
+  },
+  {
+    question: 'What is a paid media system diagnosis?',
+    answer:
+      'An independent evaluation of Google Ads, Meta Ads, and attribution systems. I determine waste, inefficiency, and business impact by examining whether advertising produced real business outcomes, not just dashboard activity.',
+  },
+  {
+    question: 'Who usually commissions this diagnosis?',
+    answer:
+      "Founders of multi-location service businesses. COOs and VPs of Marketing at PE-backed companies. CFOs before board review or budget reallocation. People who answer to investors when pipeline doesn't match reported performance. Operators who need numbers that survive scrutiny.",
+  },
+  {
+    question: 'How is this used internally after delivery?',
+    answer:
+      'To hold agencies accountable. To justify budget reallocation. To defend marketing decisions in board review. To decide whether to fire an agency, bring media in-house, or continue with independent execution.',
+  },
+  {
+    question: 'How is your diagnosis different from agency audits?',
+    answer:
+      "Flat-fee pricing. I have no incentive to recommend increased spend. Money-back guarantee: if I don't find at least the diagnosis fee in inefficiency, full refund. When an audit comes bundled with a management pitch, the analysis and sales process blur together. This stays separate.",
+  },
+  {
+    question: 'Do you operate campaigns?',
+    answer:
+      'Only when execution is required after diagnosis. The primary role is independent verification. Execution support is available only after diagnosis and only when structural corrections are required. This is not an agency relationship.',
+  },
+  {
+    question: 'What does a diagnosis include?',
+    answer:
+      "Written evaluation with waste quantified in dollars. Video walkthrough (executive-level, not platform tutorial). 'Do/Stop/Fix First' list ranked by business impact. Conservative recovery range. Actionable whether you hire me or implement changes yourself.",
+  },
+  {
+    question: 'How much does a diagnosis cost?',
+    answer:
+      'Campaign System Diagnosis (single platform): $1,250. Cross-Channel System Diagnosis (Google + Meta + GA4): $2,500 to $3,500. Revenue System Diagnosis (full funnel, CRM, offline conversions): $5,000 to $7,500. All pricing is flat. No percentage of spend.',
+  },
+  {
+    question: 'Can I get a diagnosis without hiring you for ongoing work?',
+    answer:
+      "Yes. The diagnosis is standalone. Many clients use it to correct issues internally or hold existing providers accountable. Some clients stop after the diagnosis. That's an appropriate outcome.",
+  },
+  {
+    question: 'What is your pricing model for ongoing execution support?',
+    answer:
+      'Flat-fee monthly. Not percentage of spend. Essential (single location or platform): $3,000 per month. Professional (multi-location or platform): $5,000 per month. Enterprise: $7,500 to $8,000 per month. No long-term contracts. Only offered after diagnosis.',
+  },
+  {
+    question: "Why don't you charge a percentage of ad spend?",
+    answer:
+      'Percentage-based pricing means revenue grows with spend. Not efficiency. Flat fees align incentives with outcomes. I get paid the same whether you spend $10,000 or $1,000,000 monthly.',
+  },
+  {
+    question: 'Do you help businesses bring paid media in-house?',
+    answer:
+      'Yes, when operationally appropriate. In-housing transitions: $15,000. Team training: $5,000. Advisory: $250 per hour. The objective is to build internal capability, even when that eliminates the need for ongoing support.',
+  },
+  {
+    question: 'What about confidentiality?',
+    answer:
+      'Absolute requirement. No public reviews. No testimonials. NDAs standard. Discretion-first engagements are common where strategy exposure creates competitive risk.',
+  },
+  {
+    question: 'How long does a diagnosis take?',
+    answer:
+      '5 to 7 business days after account access. Revenue System Diagnosis with complex tracking: 10 to 14 days. Written evaluation, video walkthrough, and action plan delivered together.',
+  },
+  {
+    question: 'What platforms do you evaluate?',
+    answer:
+      'Google Ads (Search, Display, Shopping, Performance Max), Meta Ads, GA4, call tracking, CRM integrations, offline conversion tracking. LinkedIn Ads and Microsoft Ads on request.',
+  },
+  {
+    question: 'Where are you located?',
+    answer: 'Las Vegas, Nevada. Engagements conducted remotely.',
+  },
+  {
+    question: 'How do I get started?',
+    answer:
+      'Submit a diagnosis request through the contact form. Short intake call to confirm scope and access. Most diagnoses begin within 48 hours of receiving account access.',
+  },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
+---
+
+<BaseLayout
+  title="FAQ | BUT DID YOU WIN - Paid Media Diagnosis Questions Answered"
+  description="Frequently asked questions about paid media system diagnosis, pricing, services, and the independent evaluator approach. Get answers about Google Ads and Meta Ads audits."
+  schema={schema}
+>
+  <section class="py-10 md:py-16 bg-white">
+    <div class="site-container">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-center mb-6 text-brand-blue">Frequently Asked Questions</h1>
+        <p class="text-xl text-center text-gray-700 mb-12 leading-relaxed">
+          Everything you need to know about independent paid media diagnosis
+        </p>
+
+        <div class="space-y-4">
+          {
+            faqs.map((faq, index) => (
+              <div class="card faq-item">
+                <button
+                  class="faq-toggle w-full text-left flex justify-between items-start gap-4"
+                  aria-expanded="false"
+                  aria-controls={`faq-answer-${index}`}
+                >
+                  <h2 class="text-xl font-bold text-brand-blue">{faq.question}</h2>
+                  <svg
+                    class="w-6 h-6 text-brand-blue flex-shrink-0 transform transition-transform faq-icon"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                <div id={`faq-answer-${index}`} class="faq-answer hidden">
+                  <p class="text-gray-700 leading-relaxed">{faq.answer}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+
+        <div class="mt-10 text-center">
+          <p class="text-lg text-gray-700 mb-6">Still have questions?</p>
+          <a href="/contact" class="btn-primary inline-block">Request Diagnosis</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  document.querySelectorAll('.faq-toggle').forEach((button) => {
+    button.addEventListener('click', () => {
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+      const answerId = button.getAttribute('aria-controls');
+      if (!answerId) return;
+      const answer = document.getElementById(answerId);
+      const icon = button.querySelector('.faq-icon');
+
+      button.setAttribute('aria-expanded', String(!expanded));
+      answer?.classList.toggle('hidden');
+      icon?.classList.toggle('rotate-180');
+    });
+  });
+</script>
